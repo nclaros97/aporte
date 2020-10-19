@@ -1,0 +1,94 @@
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.csprojAssemblyReference.cache
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.csproj.GenerateResource.cache
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.csproj.CoreCompileInputs.cache
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Properties.Resources.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.exe.config
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.exe.manifest
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.application
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.exe
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.pdb
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.exe.manifest
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.application
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.exe
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.pdb
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Clientes.FormListaClientes.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.FormLogo.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Clientes.FormMantCliente.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.FormMenuPrincipal.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormListaPartidas.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormMantClasificacionCuenta.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormMantCuentas.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormMantPartidas.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.FormLogin.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Inventario.FormListaInventario.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormListaCompras.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormListaProductos.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantCategorias.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantImpuestos.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantCompras.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantUnidades.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantProductos.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormListaUsuarios.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormMantRoles.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormMantUsuarios.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormMantFuncionesRoles.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\LOGICA.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\DATOS.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\LOGICA.pdb
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\DATOS.pdb
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.csproj.CopyComplete
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\System.Data.SqlClient.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\System.Data.SqlClient.xml
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormListaRoles.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormMantPermisosFunciones.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormListaCuenta.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormProductos.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Facturacion.FormListaFacturas.resources
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Facturacion.FormMantFactura.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.exe.config
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.exe.manifest
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.application
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.exe
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\SistemaVentaFacturacion.pdb
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\LOGICA.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\System.Data.SqlClient.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\DATOS.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\LOGICA.pdb
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\System.Data.SqlClient.xml
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\bin\Debug\DATOS.pdb
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.csprojAssemblyReference.cache
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Clientes.FormListaClientes.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormListaPartidas.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormMantClasificacionCuenta.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormMantCuentas.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormMantPartidas.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Contabilidad.FormListaCuenta.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Facturacion.FormListaFacturas.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Facturacion.FormMantFactura.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.FormLogin.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.FormLogo.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Clientes.FormMantCliente.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.FormMenuPrincipal.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Inventario.FormListaInventario.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormListaCompras.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantCompras.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormProductos.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormListaProductos.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantImpuestos.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantUnidades.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantCategorias.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Productos.FormMantProductos.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Properties.Resources.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormListaRoles.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormListaUsuarios.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormMantRoles.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormMantPermisosFunciones.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormMantFuncionesRoles.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.Usuarios.FormMantUsuarios.resources
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.csproj.GenerateResource.cache
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.csproj.CoreCompileInputs.cache
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.exe.manifest
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.application
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.csproj.CopyComplete
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.exe
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\SistemaVentaFacturacion\obj\Debug\SistemaVentaFacturacion.pdb

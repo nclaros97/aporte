@@ -1,0 +1,72 @@
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\LOGICA.deps.json
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\LOGICA.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.csprojAssemblyReference.cache
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.AssemblyInfoInputs.cache
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.AssemblyInfo.cs
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\LOGICA.pdb
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\DATOS.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\Accessibility.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Deployment.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\DATOS.pdb
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Security.xml
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\Accessibility.xml
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Deployment.xml
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.csproj.CoreCompileInputs.cache
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.csproj.CopyComplete
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.dll
+C:\Users\nilso\Desktop\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.pdb
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\LOGICA.deps.json
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\LOGICA.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\LOGICA.pdb
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\DATOS.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Security.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Configuration.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\Accessibility.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Deployment.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\DATOS.pdb
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Security.xml
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Configuration.xml
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\Accessibility.xml
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Deployment.xml
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.csprojAssemblyReference.cache
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.AssemblyInfoInputs.cache
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.AssemblyInfo.cs
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.csproj.CoreCompileInputs.cache
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.csproj.CopyComplete
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.dll
+D:\Respaldo Nilson\Escritorio\PROYECTO LIZ\SistemaVentaFacturacion\LOGICA\obj\Debug\netstandard2.0\LOGICA.pdb
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\LOGICA.deps.json
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\LOGICA.dll
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\LOGICA.pdb
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\DATOS.dll
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\Accessibility.dll
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Deployment.dll
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\DATOS.pdb
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Security.xml
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\Accessibility.xml
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Deployment.xml
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\obj\Debug\netstandard2.0\LOGICA.csprojAssemblyReference.cache
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\obj\Debug\netstandard2.0\LOGICA.AssemblyInfoInputs.cache
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\obj\Debug\netstandard2.0\LOGICA.AssemblyInfo.cs
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\obj\Debug\netstandard2.0\LOGICA.csproj.CoreCompileInputs.cache
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\obj\Debug\netstandard2.0\LOGICA.csproj.CopyComplete
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\obj\Debug\netstandard2.0\LOGICA.dll
+C:\Users\nilso\OneDrive\Escritorio\Proyeco\SistemaPrestamos\LOGICA\obj\Debug\netstandard2.0\LOGICA.pdb
