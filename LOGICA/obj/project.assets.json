@@ -872,11 +872,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\LOGICA\\LOGICA.csproj",
+      "projectUniqueName": "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\LOGICA\\LOGICA.csproj",
       "projectName": "LOGICA",
-      "projectPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\LOGICA\\LOGICA.csproj",
+      "projectPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\LOGICA\\LOGICA.csproj",
       "packagesPath": "C:\\Users\\nilso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\LOGICA\\obj\\",
+      "outputPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\LOGICA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nilso\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -892,8 +892,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\DATOS\\DATOS.csproj": {
-              "projectPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\DATOS\\DATOS.csproj"
+            "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\DATOS\\DATOS.csproj": {
+              "projectPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\DATOS\\DATOS.csproj"
             }
           }
         }

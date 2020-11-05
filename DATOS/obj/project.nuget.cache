@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "etUV99Rc2orLRPzeHSK7oXIE6cdJ4rWuMU0fJbyUsB+GoyM7y/D8g7hxke5aorkGEWYUqGjUl/Q7wZZlsrqU2g==",
+  "dgSpecHash": "3rWkZwqOZ9rnYEyGF/HHRWm5kEUabKjNMiSZXH49f6id3iyi6YOk20WLM9L/9jop4SUOZqYp8B54AsPHIyKKdA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\DATOS\\DATOS.csproj",
+  "projectFilePath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\DATOS\\DATOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nilso\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\nilso\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

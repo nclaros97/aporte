@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\DATOS\\DATOS.csproj": {}
+    "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\DATOS\\DATOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\DATOS\\DATOS.csproj": {
+    "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\DATOS\\DATOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\DATOS\\DATOS.csproj",
+        "projectUniqueName": "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\DATOS\\DATOS.csproj",
         "projectName": "DATOS",
-        "projectPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\DATOS\\DATOS.csproj",
+        "projectPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\DATOS\\DATOS.csproj",
         "packagesPath": "C:\\Users\\nilso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\DATOS\\obj\\",
+        "outputPath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\DATOS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nilso\\AppData\\Roaming\\NuGet\\NuGet.Config",

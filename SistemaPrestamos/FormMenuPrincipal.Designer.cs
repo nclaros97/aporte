@@ -61,6 +61,7 @@
             this.tmExpandirMenu = new System.Windows.Forms.Timer(this.components);
             this.tmContraerMenu = new System.Windows.Forms.Timer(this.components);
             this.tmFechaHora = new System.Windows.Forms.Timer(this.components);
+            this.btnPrestamos = new System.Windows.Forms.Button();
             this.panelContenedorPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -204,6 +205,7 @@
             // 
             // panelOpciones
             // 
+            this.panelOpciones.Controls.Add(this.btnPrestamos);
             this.panelOpciones.Controls.Add(this.label6);
             this.panelOpciones.Controls.Add(this.btnListaUsuarios);
             this.panelOpciones.Controls.Add(this.btnListaClientes);
@@ -475,6 +477,28 @@
             this.tmFechaHora.Enabled = true;
             this.tmFechaHora.Tick += new System.EventHandler(this.tmFechaHora_Tick);
             // 
+            // btnPrestamos
+            // 
+            this.btnPrestamos.AccessibleName = "Formulario Prestamos";
+            this.btnPrestamos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnPrestamos.FlatAppearance.BorderSize = 0;
+            this.btnPrestamos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.btnPrestamos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.btnPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrestamos.ForeColor = System.Drawing.Color.Silver;
+            this.btnPrestamos.Image = global::SistemaPrestamos.Properties.Resources.contabilidad;
+            this.btnPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrestamos.Location = new System.Drawing.Point(0, 128);
+            this.btnPrestamos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrestamos.Name = "btnPrestamos";
+            this.btnPrestamos.Size = new System.Drawing.Size(307, 49);
+            this.btnPrestamos.TabIndex = 16;
+            this.btnPrestamos.Text = "    Prestamos";
+            this.btnPrestamos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrestamos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrestamos.UseVisualStyleBackColor = true;
+            // 
             // FormMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -541,6 +565,7 @@
         private System.Windows.Forms.Panel panelOpciones;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnNormal;
+        private System.Windows.Forms.Button btnPrestamos;
     }
 }
 

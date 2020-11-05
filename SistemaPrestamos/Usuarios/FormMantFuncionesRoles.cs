@@ -76,19 +76,25 @@ namespace SistemaVentaFacturacion.Usuarios
             string nombreFuncion = "";
             foreach (Control item in this.Controls)
             {
-                //filtro solo groupbox
-                if (item is GroupBox)
+                if (item is Panel)
                 {
-                    nombreFuncion = item.AccessibleName;
-                    //si es groupbox que recorra todos los objetos dentro del groupbox
                     foreach (Control control in item.Controls)
                     {
-                        if (control is Button)
+                        //filtro solo groupbox
+                        if (control is GroupBox)
                         {
-                            if (!control.Text.Equals("Cancelar"))
+                            nombreFuncion = control.AccessibleName;
+                            //si es groupbox que recorra todos los objetos dentro del groupbox
+                            foreach (Control control1 in control.Controls)
                             {
+                                if (control1 is Button)
+                                {
+                                    if (!control1.Text.Equals("Cancelar"))
+                                    {
 
-                                control.Enabled = false;
+                                        control1.Enabled = false;
+                                    }
+                                }
                             }
                         }
                     }
@@ -376,6 +382,11 @@ namespace SistemaVentaFacturacion.Usuarios
             {
                 MessageBox.Show($"El permiso {cbPermisos.Text} ya esta asignado a la funcion {funDescrip} con el rol {rolDescrip}");
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

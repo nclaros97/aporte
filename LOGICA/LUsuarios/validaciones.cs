@@ -551,110 +551,116 @@ namespace LOGICA.LUsuarios
             //Recorre todos los objetos del formulario
             foreach (Control item in controlForm)
             {
-                //filtro solo groupbox
-                if(item is GroupBox)
+                if(item is Panel)
                 {
-                    nombreFuncion = item.AccessibleName;
-                    //si es groupbox que recorra todos los objetos dentro del groupbox
                     foreach (Control control in item.Controls)
                     {
-                        //filtro por Datagrid en cada groupbox
-                        if(control is DataGridView)
+                        //filtro solo groupbox
+                        if (control is GroupBox)
                         {
-                            //filtro cada datagrid total 3 en el formulario
-                            if (control.Name.Equals("GridFunciones"))
+                            nombreFuncion = control.AccessibleName;
+                            //si es groupbox que recorra todos los objetos dentro del groupbox
+                            foreach (Control control1 in control.Controls)
                             {
-                                //Paso el control como DataGridView para recorrerlo
-                                DataGridView data = control as DataGridView;
-                                for (int i = 0; i < data.Rows.Count -1; i++)
+                                //filtro por Datagrid en cada groupbox
+                                if (control1 is DataGridView)
                                 {
-                                    //recorrer las funciones disponibles del ususario logeado
-                                    foreach (var funcion1 in funcionesG)
+                                    //filtro cada datagrid total 3 en el formulario
+                                    if (control1.Name.Equals("GridFunciones"))
                                     {
-                                       
-                                        //recorrer los permisos de las funciones
-                                        if (funcion1.NombreFuncion.Equals(nombreFuncion))
+                                        //Paso el control1 como DataGridView para recorrerlo
+                                        DataGridView data = control1 as DataGridView;
+                                        for (int i = 0; i < data.Rows.Count - 1; i++)
                                         {
-                                            foreach (var permisos in permisosG)
-                                            {
-                                                if (permisos.Permiso.Equals("Editar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
-                                                {
-                                                    data.Rows[i].Cells[0].ReadOnly = false;
-                                                }
-                                                if (permisos.Permiso.Equals("Eliminar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
-                                                {
-                                                    data.Rows[i].Cells[1].ReadOnly = false;
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            if (control.Name.Equals("GridRolFuncion"))
-                            {
-                                DataGridView data = control as DataGridView;
-                                for (int i = 0; i < data.Rows.Count -1; i++)
-                                {
-                                    if (data.Rows[i].Cells.Count > 1)
-                                    {
-                                        foreach (var funcion2 in funcionesG)
-                                        {
-                                            if (funcion2.NombreFuncion.Equals(nombreFuncion))
-                                            {
-                                                foreach (var permisos in permisosG)
-                                                {
-                                                    if (permisos.Permiso.Equals("Eliminar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
-                                                    {
-                                                        data.Rows[i].Cells[0].ReadOnly = false;
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                            if (control.Name.Equals("GridPermiso"))
-                            {
-                                DataGridView data = control as DataGridView;
-                                for (int i = 0; i < data.Rows.Count -1; i++)
-                                {
-                                    if (data.Rows[i].Cells.Count > 1)
-                                    {
-                                        data.Rows[i].Cells[4].ReadOnly = true;
-                                        foreach (var funcion in funcionesG)
-                                        {
-                                            if (funcion.NombreFuncion.Equals(nombreFuncion))
+                                            //recorrer las funciones disponibles del ususario logeado
+                                            foreach (var funcion1 in funcionesG)
                                             {
 
-                                                foreach (var permisos in permisosG)
+                                                //recorrer los permisos de las funciones
+                                                if (funcion1.NombreFuncion.Equals(nombreFuncion))
                                                 {
-                                                    if (permisos.Permiso.Equals("Eliminar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
+                                                    foreach (var permisos in permisosG)
                                                     {
-                                                        data.Rows[i].Cells[0].ReadOnly = false;
-                                                    }
-                                                    if (permisos.Permiso.Equals("Editar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
-                                                    {
-                                                        data.Rows[i].Cells[4].ReadOnly = false;
+                                                        if (permisos.Permiso.Equals("Editar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
+                                                        {
+                                                            data.Rows[i].Cells[0].ReadOnly = false;
+                                                        }
+                                                        if (permisos.Permiso.Equals("Eliminar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
+                                                        {
+                                                            data.Rows[i].Cells[1].ReadOnly = false;
+                                                        }
                                                     }
                                                 }
                                             }
                                         }
                                     }
-                                }
-                            }
-
-                        }
-                        if(control is Button)
-                        {
-                            foreach (var funcion3 in funcionesG)
-                            {
-                                if (funcion3.NombreFuncion.Equals(nombreFuncion))
-                                {
-                                    foreach (var permiso in permisosG)
+                                    if (control1.Name.Equals("GridRolFuncion"))
                                     {
-                                        if (permiso.Permiso.Equals(control.AccessibleName) && nombreFuncion.Equals(permiso.NombreFuncion) && permiso.Nivel)
+                                        DataGridView data = control1 as DataGridView;
+                                        for (int i = 0; i < data.Rows.Count - 1; i++)
                                         {
-                                            control.Enabled = true;
+                                            if (data.Rows[i].Cells.Count > 1)
+                                            {
+                                                foreach (var funcion2 in funcionesG)
+                                                {
+                                                    if (funcion2.NombreFuncion.Equals(nombreFuncion))
+                                                    {
+                                                        foreach (var permisos in permisosG)
+                                                        {
+                                                            if (permisos.Permiso.Equals("Eliminar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
+                                                            {
+                                                                data.Rows[i].Cells[0].ReadOnly = false;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    if (control1.Name.Equals("GridPermiso"))
+                                    {
+                                        DataGridView data = control1 as DataGridView;
+                                        for (int i = 0; i < data.Rows.Count - 1; i++)
+                                        {
+                                            if (data.Rows[i].Cells.Count > 1)
+                                            {
+                                                data.Rows[i].Cells[4].ReadOnly = true;
+                                                foreach (var funcion in funcionesG)
+                                                {
+                                                    if (funcion.NombreFuncion.Equals(nombreFuncion))
+                                                    {
+
+                                                        foreach (var permisos in permisosG)
+                                                        {
+                                                            if (permisos.Permiso.Equals("Eliminar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
+                                                            {
+                                                                data.Rows[i].Cells[0].ReadOnly = false;
+                                                            }
+                                                            if (permisos.Permiso.Equals("Editar") && nombreFuncion.Equals(permisos.NombreFuncion) && permisos.Nivel)
+                                                            {
+                                                                data.Rows[i].Cells[4].ReadOnly = false;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                                if (control1 is Button)
+                                {
+                                    foreach (var funcion3 in funcionesG)
+                                    {
+                                        if (funcion3.NombreFuncion.Equals(nombreFuncion))
+                                        {
+                                            foreach (var permiso in permisosG)
+                                            {
+                                                if (permiso.Permiso.Equals(control1.AccessibleName) && nombreFuncion.Equals(permiso.NombreFuncion) && permiso.Nivel)
+                                                {
+                                                    control1.Enabled = true;
+                                                }
+                                            }
                                         }
                                     }
                                 }

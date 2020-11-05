@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pav1G0HyKaoiUjn3BYhEx5N/Koezlxo4OelYcIWV3tZ7uL1qurZ7dYZ2XZALzSEQ+MtqXqjdiZyrL3lITRywIw==",
+  "dgSpecHash": "zKbW/THqBKqxdcLajoMduwUCAEfGOfYY8ERlMTnfLZ5VKvFaJMHzcewBzRWSGA2t/pp2TyPulJfcYuQfbP409A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\Proyeco\\SistemaPrestamos\\LOGICA\\LOGICA.csproj",
+  "projectFilePath": "C:\\Users\\nilso\\OneDrive\\Escritorio\\PROYECTOS PROPIOS\\Proyecto Prestamos Practicante\\SistemaPrestamos\\LOGICA\\LOGICA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nilso\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\nilso\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
