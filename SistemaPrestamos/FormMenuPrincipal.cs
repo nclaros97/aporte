@@ -1,6 +1,6 @@
 ﻿using LOGICA.LUsuarios;
-using SistemaVentaFacturacion.Clientes;
-using SistemaVentaFacturacion.Usuarios;
+using SistemaPrestamos.Clientes;
+using SistemaPrestamos.Usuarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -206,6 +206,9 @@ namespace SistemaPrestamos
 
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
         {
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+
             //seguridad
             validaciones.seguridad_deshabilitarMenu(panelOpciones.Controls);
             if (sesion){
@@ -307,6 +310,12 @@ namespace SistemaPrestamos
             }
             Login();
         }
+
+        private void btnPrestamos_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             FormListaUsuarios fm = new FormListaUsuarios();

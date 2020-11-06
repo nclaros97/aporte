@@ -1,4 +1,4 @@
-﻿namespace SistemaVentaFacturacion.Usuarios
+﻿namespace SistemaPrestamos.Usuarios
 {
     partial class FormMantUsuarios
     {

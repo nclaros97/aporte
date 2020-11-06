@@ -26,7 +26,6 @@ namespace LOGICA.LUsuarios
 
             return idUser;
         }
-
         public static bool verificarPassw(string psw, bool editar)
         {
             if (editar)
@@ -92,300 +91,6 @@ namespace LOGICA.LUsuarios
             }
             return true;
         }
-
-        public static void seguridad_Categorias(Control.ControlCollection controls, string name)
-        {
-            try
-            {
-                foreach (var funcion in funcionesG)
-                {
-                    if (funcion.NombreFuncion.Equals(name))
-                    {
-                        foreach (var permiso in permisosG)
-                        {
-                            foreach (Control control in controls)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals(name) && permiso.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                                if (control is DataGridView)
-                                {
-                                    DataGridView dg = control as DataGridView;
-                                    for (int i = 0; i < dg.Rows.Count - 1; i++)
-                                    {
-                                        if (permiso.Permiso.Equals("Editar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[0].ReadOnly = false;
-                                        }
-                                        if (permiso.Permiso.Equals("Eliminar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[1].ReadOnly = false;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR SEGURIAD PRODUCTOS: \n{ex.ToString()}");
-            }
-        }
-
-        public static void seguridad_FormularioCompras(Control.ControlCollection controls, string accName)
-        {
-            foreach (Control control in controls)
-            {
-                if (control is Button)
-                {
-                    foreach (var funcion in funcionesG)
-                    {
-                        if (accName.Equals(funcion.NombreFuncion))
-                        {
-                            foreach (var item in permisosG)
-                            {
-                                if (control.Text.Equals("Editar"))
-                                {
-                                    if (item.Permiso.Equals(control.AccessibleName) && item.NombreFuncion.Equals("Formulario Detalle Partida") && item.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                                else if (control.Text.Equals("Eliminar"))
-                                {
-                                    if (item.Permiso.Equals(control.AccessibleName) && item.NombreFuncion.Equals("Formulario Detalle Partida") && item.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                                else
-                                {
-                                    if (item.Permiso.Equals(control.AccessibleName) && item.NombreFuncion.Equals(accName) && item.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-
-        public static void seguridad_compras(Control.ControlCollection controls, string name)
-        {
-            try
-            {
-                foreach (var funcion in funcionesG)
-                {
-                    if (funcion.NombreFuncion.Equals(name))
-                    {
-                        foreach (var permiso in permisosG)
-                        {
-                            foreach (Control control in controls)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals(name) && permiso.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR SEGURIAD COMPRA PRODUCTO: \n{ex.ToString()}");
-            }
-        }
-
-        public static void seguridad_Facturas(Control.ControlCollection controls, string name)
-        {
-            try
-            {
-                foreach (var funcion in funcionesG)
-                {
-                    if (funcion.NombreFuncion.Equals(name))
-                    {
-                        foreach (var permiso in permisosG)
-                        {
-                            foreach (Control control in controls)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals(name) && permiso.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR SEGURIAD COMPRA PRODUCTO: \n{ex.ToString()}");
-            }
-        }
-
-        public static void seguridad_Unidades(Control.ControlCollection controls, string name)
-        {
-            try
-            {
-                foreach (var funcion in funcionesG)
-                {
-                    if (funcion.NombreFuncion.Equals(name))
-                    {
-                        foreach (var permiso in permisosG)
-                        {
-                            foreach (Control control in controls)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals(name) && permiso.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                                if (control is DataGridView)
-                                {
-                                    DataGridView dg = control as DataGridView;
-                                    for (int i = 0; i < dg.Rows.Count - 1; i++)
-                                    {
-                                        if (permiso.Permiso.Equals("Editar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[0].ReadOnly = false;
-                                        }
-                                        if (permiso.Permiso.Equals("Eliminar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[1].ReadOnly = false;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR SEGURIAD PRODUCTOS: \n{ex.ToString()}");
-            }
-        }
-
-        public static void seguridad_Impuestos(Control.ControlCollection controls, string name)
-        {
-            try
-            {
-                foreach (var funcion in funcionesG)
-                {
-                    if (funcion.NombreFuncion.Equals(name))
-                    {
-                        foreach (var permiso in permisosG)
-                        {
-                            foreach (Control control in controls)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals(name) && permiso.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                                if (control is DataGridView)
-                                {
-                                    DataGridView dg = control as DataGridView;
-                                    for (int i = 0; i < dg.Rows.Count - 1; i++)
-                                    {
-                                        if (permiso.Permiso.Equals("Editar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[0].ReadOnly = false;
-                                        }
-                                        if (permiso.Permiso.Equals("Eliminar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[1].ReadOnly = false;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR SEGURIAD PRODUCTOS: \n{ex.ToString()}");
-            }
-        }
-
-        public static void seguridad_CaracteristicasProducto(Control.ControlCollection controls)
-        {
-            try
-            {
-                foreach (var funcion in funcionesG)
-                {
-                        foreach (var permiso in permisosG)
-                        {
-                            foreach (Control control in controls)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals(control.AccessibleDescription) && permiso.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                            }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR SEGURIAD CLIENTE: \n{ex.ToString()}");
-            }
-        }
-
-        public static void segurida_productos(Control.ControlCollection controls, string name)
-        {
-            try
-            {
-                foreach (var funcion in funcionesG)
-                {
-                    if (funcion.NombreFuncion.Equals(name))
-                    {
-                        foreach (var permiso in permisosG)
-                        {
-                            foreach (Control control in controls)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals(name) && permiso.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR SEGURIAD PRODUCTOS: \n{ex.ToString()}");
-            }
-        }
-
         public static void seguridadClientes(Control.ControlCollection controls, string name)
         {
             try
@@ -415,105 +120,6 @@ namespace LOGICA.LUsuarios
                 MessageBox.Show($"ERROR SEGURIAD CLIENTE: \n{ex.ToString()}");
             }
         }
-
-        public static void seguridad_Cuentas(Control.ControlCollection controls, string name)
-        {
-            try
-            {
-                foreach (var funcion in funcionesG)
-                {
-                    if (funcion.NombreFuncion.Equals(name))
-                    {
-                        foreach (var permiso in permisosG)
-                        {
-                            foreach (Control control in controls)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals(name) && permiso.Nivel && !control.Text.Equals("+"))
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals("Formulario Tipo Cuentas") && permiso.Nivel && control.Text.Equals("+"))
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-
-                                if (control is DataGridView)
-                                {
-                                    DataGridView dg = control as DataGridView;
-                                    for (int i = 0; i < dg.Rows.Count - 1; i++)
-                                    {
-                                        if (permiso.Permiso.Equals("Editar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[0].ReadOnly = false;
-                                        }
-                                        if (permiso.Permiso.Equals("Eliminar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[1].ReadOnly = false;
-                                        }
-                                    }
-                                }
-
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR OPCIONES TIPO CUENTA: \n{ex.ToString()}");
-            }
-        }
-
-        public static void seguridad_opcionesTipoCuenta(Control.ControlCollection controls, string name)
-        {
-            try
-            {
-                foreach (var funcion in funcionesG)
-                {
-                    if (funcion.NombreFuncion.Equals(name))
-                    {
-                        foreach (var permiso in permisosG)
-                        {
-                           foreach (Control control in controls)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permiso.Permiso.Equals(control.AccessibleName) && permiso.NombreFuncion.Equals(name) && permiso.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-
-                                if(control is DataGridView)
-                                {
-                                    DataGridView dg = control as DataGridView;
-                                    for (int i = 0; i < dg.Rows.Count - 1; i++)
-                                    {
-                                        if (permiso.Permiso.Equals("Editar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[0].ReadOnly = false;
-                                        }
-                                        if (permiso.Permiso.Equals("Eliminar") && name.Equals(permiso.NombreFuncion) && permiso.Nivel)
-                                        {
-                                            dg.Rows[i].Cells[1].ReadOnly = false;
-                                        }
-                                    }
-                                }
-
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR OPCIONES TIPO CUENTA: \n{ex.ToString()}");
-            }
-        }
-
         public static void seguridad_opcionesListaRolesUser(Control.ControlCollection controls, string name)
         {
             try
@@ -543,8 +149,7 @@ namespace LOGICA.LUsuarios
             {
                 MessageBox.Show($"Error al habilitar las funciones: \n {ex.ToString()}");
             }
-        }
-         
+        }  
         public static void seguridad_opcionesGestionFuncionesRolesPermisos(Control.ControlCollection controlForm)
         {
             string nombreFuncion = "";
@@ -670,7 +275,6 @@ namespace LOGICA.LUsuarios
                 }
             }
         }
-
         public static void seguridad_opcionesGestionPermisosRoles(Control.ControlCollection controlForm)
         {
             string nombreFuncion = "";
@@ -766,7 +370,6 @@ namespace LOGICA.LUsuarios
                 }
             }
         }
-
         public static void seguridad_opcionListaUsuario(Control.ControlCollection controlCollection, string name, DataGridView dg)
         {
             try
@@ -817,7 +420,6 @@ namespace LOGICA.LUsuarios
             }
 
         }
-
         public static bool verificarEmail(string email)
         {
             string sFormato;
@@ -837,14 +439,6 @@ namespace LOGICA.LUsuarios
 
             return result;
         }
-        public static string DesencriptarPsw(string _cadenaAdesencriptar)
-        {
-            string result = string.Empty;
-            byte[] decryted = Convert.FromBase64String(_cadenaAdesencriptar);
-            result = System.Text.Encoding.Unicode.GetString(decryted);
-            return result;
-        }
-
         public static void seguridad_deshabilitarMenu(Control.ControlCollection controls)
         {
             foreach (Control control in controls)
@@ -856,7 +450,6 @@ namespace LOGICA.LUsuarios
                 }
             }
         }
-
         public static void seguridad_habilitarMenu(Control.ControlCollection controls)
         {
             try
@@ -882,105 +475,5 @@ namespace LOGICA.LUsuarios
                 MessageBox.Show($"Error al habilitar las funciones: \n {ex.ToString()}");
             }
         }
-
-        public static void seguridad_opcionListaContabilidad(Control.ControlCollection controlCollection, string name)
-        {
-
-            try
-            {
-                foreach (var funciones in funcionesG)
-                {
-                    if (funciones.NombreFuncion.Equals(name))
-                    {
-                        foreach (var permisos in permisosG)
-                        {
-                            foreach (Control control in controlCollection)
-                            {
-                                if (control is Button)
-                                {
-                                    if (permisos.Permiso.Equals(control.AccessibleName) && permisos.NombreFuncion.Equals(name) && permisos.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                //gestion cuentas
-
-                foreach (var funciones in funcionesG)
-                {
-                    if (funciones.NombreFuncion.Equals("Formulario Gestion Cuentas"))
-                    {
-                        foreach (var permisos in permisosG)
-                        {
-                            foreach (Control control in controlCollection)
-                            {
-                                if (control is Button)
-                                {
-                                    if (control.Text.Equals("Gestion Cuentas"))
-                                    {
-                                        if (permisos.Permiso.Equals(control.AccessibleName) && permisos.Nivel)
-                                        {
-                                            control.Enabled = true;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"ERROR:\n\n{ex.ToString()}");
-            }
-
-        }
-
-
-        public static void seguridad_FormularioPartidas(Control.ControlCollection controls, string accName)
-        {
-            foreach (Control control in controls)
-            {
-                if (control is Button)
-                {
-                    foreach (var funcion in funcionesG)
-                    {
-                        if (accName.Equals(funcion.NombreFuncion))
-                        {
-                            foreach (var item in permisosG)
-                            {
-                                if (control.Text.Equals("Editar"))
-                                {
-                                    if (item.Permiso.Equals(control.AccessibleName) && item.NombreFuncion.Equals("Formulario Detalle Partida") && item.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                                else if (control.Text.Equals("Eliminar"))
-                                {
-                                    if (item.Permiso.Equals(control.AccessibleName) && item.NombreFuncion.Equals("Formulario Detalle Partida") && item.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                                else
-                                {
-                                    if (item.Permiso.Equals(control.AccessibleName) && item.NombreFuncion.Equals(accName) && item.Nivel)
-                                    {
-                                        control.Enabled = true;
-                                    }
-                                }
-                            }
-                        }
-
-                    }
-                }
-            }
-        }
-
     }
 }

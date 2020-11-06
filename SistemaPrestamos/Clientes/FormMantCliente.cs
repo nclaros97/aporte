@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaVentaFacturacion.Clientes
+namespace SistemaPrestamos.Clientes
 {
     public partial class FormMantCliente : Form
     {

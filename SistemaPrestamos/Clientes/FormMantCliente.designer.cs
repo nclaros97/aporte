@@ -1,4 +1,4 @@
-﻿namespace SistemaVentaFacturacion.Clientes
+﻿namespace SistemaPrestamos.Clientes
 {
     partial class FormMantCliente
     {

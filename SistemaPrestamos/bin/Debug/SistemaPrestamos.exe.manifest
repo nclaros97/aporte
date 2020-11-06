@@ -54,26 +54,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LOGICA.dll" size="40960">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LOGICA.dll" size="32768">
       <assemblyIdentity name="LOGICA" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>OP0PUqA4hZCmTEL6uRsqUIkfH+GP4oMTbBb5j4tzfbs=</dsig:DigestValue>
+        <dsig:DigestValue>SPySl2ui1739N44axqCoM8Asy2bJ+hGytUqCCpk5Ddg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaPrestamos.exe" size="974336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaPrestamos.exe" size="978432">
       <assemblyIdentity name="SistemaPrestamos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t1gwJZBcuwQmFq128wis84EyylAcsaGBU+k/AXIV4t0=</dsig:DigestValue>
+        <dsig:DigestValue>sxrwLPlEiZfgoXEe+cYA+MFvGMDJLwgWri1xnog9Rwg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

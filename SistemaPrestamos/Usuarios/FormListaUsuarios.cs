@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace SistemaVentaFacturacion.Usuarios
+namespace SistemaPrestamos.Usuarios
 {
     public partial class FormListaUsuarios : Form
     {

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaVentaFacturacion.Usuarios
+namespace SistemaPrestamos.Usuarios
 {
     public partial class FormMantPermisosFunciones : Form
     {
