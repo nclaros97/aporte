@@ -1,5 +1,6 @@
 ﻿using LOGICA.LClientes;
 using LOGICA.LUsuarios;
+using SistemaPrestamos.Prestamos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,14 @@ namespace SistemaPrestamos.Clientes
 
         private void FormListaClientes_Load(object sender, EventArgs e)
         {
+
+            if (busqueda)
+            {
+                btnNuevo.Visible = false;
+                btnEditar.Visible = false;
+                btnEliminar.Visible = false;
+            }
+
             //CARGAR GRID
 
             GridClientes.DataSource = scriptClientes.getDataCliente();
@@ -81,19 +90,6 @@ namespace SistemaPrestamos.Clientes
             frm.FormClosed += new FormClosedEventHandler(Form3_Closed);
             frm.ShowDialog();
         }
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*if (busqueda)
-            {
-                FormMembresia frm = Owner as FormMembresia;
-                //FormMembresia frm = new FormMembresia();
-
-                frm.txtid.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-                frm.txtnombre.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                frm.txtapellido.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                this.Close();
-            }*/
-        }
 
         private void txtBuscar_Enter(object sender, EventArgs e)
         {
@@ -135,6 +131,25 @@ namespace SistemaPrestamos.Clientes
             }
             else
                 MessageBox.Show("seleccione una fila para poder eliminar por favor");
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            GridClientes.DataSource = scriptClientes.getDataClienteBusqueda(txtBuscar.Text);
+        }
+
+        private void GridClientes_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (busqueda)
+            {
+                FormMantPrestamos frm = Owner as FormMantPrestamos;
+
+                string id = GridClientes.CurrentRow.Cells[0].Value.ToString();
+                string nombre = GridClientes.CurrentRow.Cells[1].Value.ToString() + " " + GridClientes.CurrentRow.Cells[2].Value.ToString();
+                frm.txtClienteId.Text = id;
+                frm.txtClienteNombre.Text = nombre;
+                this.Close();
+            }
         }
     }
 }

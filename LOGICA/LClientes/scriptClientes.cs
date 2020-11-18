@@ -30,6 +30,26 @@ namespace LOGICA.LClientes
             return data;
         }
 
+        public static object getDataClienteBusqueda(string texto)
+        {
+            conexion_db.getConnection();
+            DataTable data = new DataTable();
+            try
+            {
+                SqlDataAdapter sqlDA = new SqlDataAdapter("dbo.WWCLIENTES", conexion_db.conexion);
+                sqlDA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDA.SelectCommand.Parameters.AddWithValue("accion", "SELECT_GRID_CLIENTE_PARAMETRO");
+                sqlDA.SelectCommand.Parameters.AddWithValue("parametro", texto);
+                sqlDA.Fill(data);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"ERROR: \n {ex.ToString()}");
+            }
+            return data;
+        }
+
         public static DataTable getDataClienteId(int cliId)
         {
             conexion_db.getConnection();

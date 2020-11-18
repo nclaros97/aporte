@@ -35,8 +35,9 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCuotas = new System.Windows.Forms.Button();
             this.BtnCerrar = new System.Windows.Forms.Button();
+            this.cbFondos = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GridPresmosCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,11 +96,11 @@
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscar.Multiline = true;
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(957, 46);
+            this.txtBuscar.Size = new System.Drawing.Size(340, 37);
             this.txtBuscar.TabIndex = 19;
-            this.txtBuscar.Text = "Buscar prestamo de cliente ";
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            this.txtBuscar.Text = "Buscar prestamo de cliente";
             this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
             this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // btnNuevo
@@ -138,7 +139,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(979, 235);
+            this.btnEliminar.Location = new System.Drawing.Point(979, 258);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(133, 37);
@@ -148,28 +149,28 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnEditar
+            // btnCuotas
             // 
-            this.btnEditar.AccessibleName = "Editar";
-            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(177)))), ((int)(((byte)(17)))));
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(979, 191);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(133, 37);
-            this.btnEditar.TabIndex = 16;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnCuotas.AccessibleName = "Editar";
+            this.btnCuotas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCuotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(177)))), ((int)(((byte)(17)))));
+            this.btnCuotas.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnCuotas.FlatAppearance.BorderColor = System.Drawing.Color.DimGray;
+            this.btnCuotas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(69)))), ((int)(((byte)(76)))));
+            this.btnCuotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(45)))), ((int)(((byte)(53)))));
+            this.btnCuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCuotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCuotas.ForeColor = System.Drawing.Color.White;
+            this.btnCuotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCuotas.Location = new System.Drawing.Point(979, 191);
+            this.btnCuotas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCuotas.Name = "btnCuotas";
+            this.btnCuotas.Size = new System.Drawing.Size(133, 37);
+            this.btnCuotas.TabIndex = 16;
+            this.btnCuotas.Text = "Cuotas";
+            this.btnCuotas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCuotas.UseVisualStyleBackColor = false;
+            this.btnCuotas.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // BtnCerrar
             // 
@@ -186,6 +187,22 @@
             this.BtnCerrar.UseVisualStyleBackColor = false;
             this.BtnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // cbFondos
+            // 
+            this.cbFondos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(177)))), ((int)(((byte)(17)))));
+            this.cbFondos.DropDownHeight = 100;
+            this.cbFondos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbFondos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFondos.ForeColor = System.Drawing.SystemColors.Window;
+            this.cbFondos.FormattingEnabled = true;
+            this.cbFondos.IntegralHeight = false;
+            this.cbFondos.ItemHeight = 29;
+            this.cbFondos.Location = new System.Drawing.Point(374, 92);
+            this.cbFondos.Margin = new System.Windows.Forms.Padding(4);
+            this.cbFondos.Name = "cbFondos";
+            this.cbFondos.Size = new System.Drawing.Size(405, 37);
+            this.cbFondos.TabIndex = 21;
+            // 
             // FormListaPrestamos
             // 
             this.AccessibleName = "Formulario Clientes";
@@ -193,11 +210,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1160, 833);
+            this.Controls.Add(this.cbFondos);
             this.Controls.Add(this.GridPresmosCliente);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnCuotas);
             this.Controls.Add(this.BtnCerrar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormListaPrestamos";
@@ -215,7 +233,8 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCuotas;
         private System.Windows.Forms.Button BtnCerrar;
+        private System.Windows.Forms.ComboBox cbFondos;
     }
 }

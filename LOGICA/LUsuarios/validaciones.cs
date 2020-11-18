@@ -26,6 +26,18 @@ namespace LOGICA.LUsuarios
 
             return idUser;
         }
+        public static string nickUsuario()
+        {
+            string nick = "";
+
+            foreach (var item in funcionesG)
+            {
+                nick = item.UserNick;
+                break;
+            }
+
+            return nick;
+        }
         public static bool verificarPassw(string psw, bool editar)
         {
             if (editar)

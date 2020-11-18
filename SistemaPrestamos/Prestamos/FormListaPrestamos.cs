@@ -1,4 +1,5 @@
 ﻿using LOGICA.LClientes;
+using LOGICA.LPrestamos;
 using LOGICA.LUsuarios;
 using System;
 using System.Collections.Generic;
@@ -28,8 +29,23 @@ namespace SistemaPrestamos.Prestamos
         private void FormListaPrestamos_Load(object sender, EventArgs e)
         {
             //CARGAR GRID
+            
+            GridPresmosCliente.DataSource = scriptPrestamos.getDataPrestamosClientes();
+            if(GridPresmosCliente.Rows.Count == 0)
+            {
+                MessageBox.Show(null,"No hay datos registrados","Atención",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+            //CARGAR COMBOBOX DE TIPOS DE FONDOS
+            GridPresmosCliente.Columns[10].Visible = false;
+            GridPresmosCliente.Columns[11].Visible = false;
+            GridPresmosCliente.Columns[5].DefaultCellStyle.Format = "N";
+            GridPresmosCliente.Columns[6].DefaultCellStyle.Format = "N";
 
-            GridPresmosCliente.DataSource = scriptClientes.getDataCliente();
+            GridPresmosCliente.Columns[4].DefaultCellStyle.Format = "dd/MM/yyyy";
+            GridPresmosCliente.Columns[8].DefaultCellStyle.Format = "dd/MM/yyyy";
+            GridPresmosCliente.Columns[9].DefaultCellStyle.Format = "dd/MM/yyyy";
+
+            CargarComboTipoFondos();
 
             //desabilitar botones
             foreach (Control item in this.Controls)
@@ -47,44 +63,66 @@ namespace SistemaPrestamos.Prestamos
             validaciones.seguridadClientes(this.Controls, this.AccessibleName);
         }
 
+
+        private void CargarComboTipoFondos()
+        {
+            try
+            {
+                cbFondos.ValueMember = "ID";
+                cbFondos.DisplayMember = "FONDO";
+                cbFondos.DataSource = scriptPrestamos.cbFondos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"ERROR: \n {ex.Message.ToString()}");
+            }
+        }
+
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            //if (GridPresmosCliente.SelectedRows.Count > 0)
-            //{
-            //    FormMantPrestamos frm = new FormMantPrestamos();
-            //    frm.txtid.Text= GridPresmosCliente.CurrentRow.Cells[0].Value.ToString();
-            //    frm.txtnombre.Text = GridPresmosCliente.CurrentRow.Cells[1].Value.ToString();
-            //    frm.txtapellido.Text = GridPresmosCliente.CurrentRow.Cells[2].Value.ToString();
-            //    frm.txtNumeroIdentidad.Text = GridPresmosCliente.CurrentRow.Cells[3].Value.ToString();
-            //    frm.txtRTN.Text = GridPresmosCliente.CurrentRow.Cells[4].Value.ToString();
-            //    frm.txtCorreo.Text = GridPresmosCliente.CurrentRow.Cells[5].Value.ToString();
-            //    frm.txtTelefono.Text = GridPresmosCliente.CurrentRow.Cells[6].Value.ToString();
-            //    frm.txtDireccion.Text = GridPresmosCliente.CurrentRow.Cells[7].Value.ToString();
-            //    frm.IsInsert = false;
-            //    frm.FormClosed += new FormClosedEventHandler(Form3_Closed);
-            //    frm.ShowDialog();
-             
-            //}
-            //else
-            //    MessageBox.Show("seleccione una fila por favor");
+            if (GridPresmosCliente.SelectedRows.Count > 0)
+            {
+                FormMantPrestamos hijo = new FormMantPrestamos();
+                AddOwnedForm(hijo);
+                hijo.FormBorderStyle = FormBorderStyle.None;
+                hijo.TopLevel = false;
+                hijo.Dock = DockStyle.Fill;
+                hijo.FormClosed += new FormClosedEventHandler(Form3_Closed);
+                this.Controls.Add(hijo);
+                this.Tag = hijo;
+                hijo.busqueda = true;
+                hijo.txtClienteId.Text = GridPresmosCliente.CurrentRow.Cells[11].Value.ToString();
+                hijo.txtClienteNombre.Text = GridPresmosCliente.CurrentRow.Cells[0].Value.ToString();
+                hijo.idPrestamo = int.Parse(GridPresmosCliente.CurrentRow.Cells[10].Value.ToString());
+                hijo.BringToFront();
+                hijo.Show();
+            }
+            else
+                MessageBox.Show("seleccione una fila por favor");
         }
 
         private void Form3_Closed(object sender, EventArgs e)
         {
-            GridPresmosCliente.DataSource = scriptClientes.getDataCliente();
+            GridPresmosCliente.DataSource = scriptPrestamos.getDataPrestamosClientes();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            //FormMantPrestamos frm = new FormMantPrestamos();
-            //frm.IsInsert = true;
-            //frm.FormClosed += new FormClosedEventHandler(Form3_Closed);
-            //frm.ShowDialog();
+            FormMantPrestamos hijo = new FormMantPrestamos();
+            AddOwnedForm(hijo);
+            hijo.FormBorderStyle = FormBorderStyle.None;
+            hijo.TopLevel = false;
+            hijo.Dock = DockStyle.Fill;
+            hijo.FormClosed += new FormClosedEventHandler(Form3_Closed);
+            this.Controls.Add(hijo);
+            this.Tag = hijo;
+            hijo.BringToFront();
+            hijo.Show();
         }
 
         private void txtBuscar_Enter(object sender, EventArgs e)
         {
-            if(txtBuscar.Text.Equals("Buscar cliente"))
+            if(txtBuscar.Text.Equals("Buscar prestamo de cliente"))
             {
                 txtBuscar.Text = "";
                 txtBuscar.ForeColor = Color.Black;
@@ -95,25 +133,20 @@ namespace SistemaPrestamos.Prestamos
         {
             if (txtBuscar.Text.Equals(""))
             {
-                txtBuscar.Text = "Buscar cliente";
+                txtBuscar.Text = "Buscar prestamo de cliente";
                 txtBuscar.ForeColor = SystemColors.GrayText;
             }
-        }
-
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-            //Buscar
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (GridPresmosCliente.SelectedRows.Count == 1)
             {
-                if (MessageBox.Show($"¿Está seguro de eliminar al usuario: {GridPresmosCliente.CurrentRow.Cells[1].Value.ToString()}?",
+                if (MessageBox.Show($"¿Está seguro de eliminar al prestamo?",
                     "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    scriptClientes.deleteCliente(Convert.ToInt32(GridPresmosCliente.CurrentRow.Cells[0].Value.ToString()));
-                    GridPresmosCliente.DataSource = scriptClientes.getDataCliente();
+                    scriptPrestamos.deletePrestamo(Convert.ToInt32(GridPresmosCliente.CurrentRow.Cells[10].Value.ToString()));
+                    GridPresmosCliente.DataSource = scriptPrestamos.getDataPrestamosClientes();
                 }
                 else
                 {
@@ -122,6 +155,11 @@ namespace SistemaPrestamos.Prestamos
             }
             else
                 MessageBox.Show("seleccione una fila para poder eliminar por favor");
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            GridPresmosCliente.DataSource = scriptPrestamos.getDataPrestamosClientesBusqueda(txtBuscar.Text);
         }
     }
 }

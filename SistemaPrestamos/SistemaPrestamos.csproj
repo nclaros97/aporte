@@ -82,6 +82,7 @@
     <Compile Include="Clientes\FormListaClientes.designer.cs">
       <DependentUpon>FormListaClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Enums\PeriodosEnum.cs" />
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +106,12 @@
     </Compile>
     <Compile Include="FormMenuPrincipal.Designer.cs">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prestamos\FormMantPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prestamos\FormMantPrestamos.designer.cs">
+      <DependentUpon>FormMantPrestamos.cs</DependentUpon>
     </Compile>
     <Compile Include="Prestamos\FormListaPrestamos.cs">
       <SubType>Form</SubType>
@@ -164,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuPrincipal.resx">
       <DependentUpon>FormMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamos\FormMantPrestamos.resx">
+      <DependentUpon>FormMantPrestamos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prestamos\FormListaPrestamos.resx">
       <DependentUpon>FormListaPrestamos.cs</DependentUpon>

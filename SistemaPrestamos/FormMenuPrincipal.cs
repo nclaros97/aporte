@@ -1,5 +1,6 @@
 ﻿using LOGICA.LUsuarios;
 using SistemaPrestamos.Clientes;
+using SistemaPrestamos.Prestamos;
 using SistemaPrestamos.Usuarios;
 using System;
 using System.Collections.Generic;
@@ -180,7 +181,7 @@ namespace SistemaPrestamos
         }
 
         //METODO PARA ABRIR FORM DENTRO DE PANEL-----------------------------------------------------
-        private void AbrirFormEnPanel(object formHijo)
+        public void AbrirFormEnPanel(object formHijo)
         {
             if (this.panelContenedorForm.Controls.Count > 0)
                 this.panelContenedorForm.Controls.RemoveAt(0);
@@ -247,7 +248,7 @@ namespace SistemaPrestamos
 
 
         //METODO PARA MOSTRAR FORMULARIO DE LOGO Al CERRAR OTROS FORM ----------------------------------------------------------
-        private void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)
+        public void MostrarFormLogoAlCerrarForms(object sender, FormClosedEventArgs e)
         {
             //verificar estado del inicio de sesion;
 
@@ -313,7 +314,9 @@ namespace SistemaPrestamos
 
         private void btnPrestamos_Click(object sender, EventArgs e)
         {
-
+            FormListaPrestamos fm = new FormListaPrestamos();
+            fm.FormClosed += new FormClosedEventHandler(MostrarFormLogoAlCerrarForms);
+            AbrirFormEnPanel(fm);
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)

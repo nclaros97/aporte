@@ -85,6 +85,7 @@
             this.GridClientes.RowHeadersWidth = 51;
             this.GridClientes.Size = new System.Drawing.Size(959, 674);
             this.GridClientes.TabIndex = 20;
+            this.GridClientes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridClientes_CellContentDoubleClick);
             // 
             // txtBuscar
             // 
@@ -97,7 +98,10 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(957, 46);
             this.txtBuscar.TabIndex = 19;
-            this.txtBuscar.Text = "Buscar cliente ";
+            this.txtBuscar.Text = "Buscar cliente";
+            this.txtBuscar.Enter += new System.EventHandler(this.txtBuscar_Enter);
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
+            this.txtBuscar.Leave += new System.EventHandler(this.txtBuscar_Leave);
             // 
             // btnNuevo
             // 
@@ -198,6 +202,7 @@
             this.Controls.Add(this.BtnCerrar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormListaClientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormListaClientes";
             this.Load += new System.EventHandler(this.FormListaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).EndInit();

@@ -108,3 +108,4 @@ C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practica
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\SistemaPrestamos\obj\Debug\SistemaPrestamos.Usuarios.FormMantPermisosFunciones.resources
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\SistemaPrestamos\obj\Debug\SistemaPrestamos.Usuarios.FormMantFuncionesRoles.resources
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\SistemaPrestamos\obj\Debug\SistemaPrestamos.Usuarios.FormMantUsuarios.resources
+C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\SistemaPrestamos\obj\Debug\SistemaPrestamos.Prestamos.FormMantPrestamos.resources

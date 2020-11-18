@@ -49,31 +49,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nguxRJMlM2UnuvjL3KpgaokyFbAJDp0nU7m37LEq9Zs=</dsig:DigestValue>
+        <dsig:DigestValue>aFfi//wTartXjeg1+jQucsLdl2MGTeFEZP8TT/KXObI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LOGICA.dll" size="32768">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LOGICA.dll" size="38400">
       <assemblyIdentity name="LOGICA" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SPySl2ui1739N44axqCoM8Asy2bJ+hGytUqCCpk5Ddg=</dsig:DigestValue>
+        <dsig:DigestValue>8sQ8MgVKCj4lwdgR4UMNLVkTrJq8urX+X3dINboFnEU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaPrestamos.exe" size="978432">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaPrestamos.exe" size="989696">
       <assemblyIdentity name="SistemaPrestamos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sxrwLPlEiZfgoXEe+cYA+MFvGMDJLwgWri1xnog9Rwg=</dsig:DigestValue>
+        <dsig:DigestValue>lfkXWgUH7wu6JT8nGHOgC20m7dhEqRs/yHYdZ2zG/5s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
