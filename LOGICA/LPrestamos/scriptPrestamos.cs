@@ -89,16 +89,16 @@ namespace LOGICA.LPrestamos
             return data;
         }
 
-        public static DataTable getDataClienteId(int cliId)
+        public static DataTable getDataPrestamoClienteId(int preId)
         {
             conexion_db.getConnection();
             DataTable data = new DataTable();
             try
             {
-                SqlDataAdapter sqlDA = new SqlDataAdapter("dbo.WWCLIENTES", conexion_db.conexion);
+                SqlDataAdapter sqlDA = new SqlDataAdapter("dbo.WWPrestamos", conexion_db.conexion);
                 sqlDA.SelectCommand.CommandType = CommandType.StoredProcedure;
-                sqlDA.SelectCommand.Parameters.AddWithValue("@cliId", cliId);
-                sqlDA.SelectCommand.Parameters.AddWithValue("accion", "SELECT_GRID_CLIENTE_ID");
+                sqlDA.SelectCommand.Parameters.AddWithValue("@preId", preId);
+                sqlDA.SelectCommand.Parameters.AddWithValue("accion", "SELECT_GRID_CLIENTE_PRESTAMOS_ID");
                 sqlDA.Fill(data);
 
             }
@@ -106,6 +106,8 @@ namespace LOGICA.LPrestamos
             {
                 MessageBox.Show($"ERROR: \n {ex.ToString()}");
             }
+            
+            
             return data;
         }
 
@@ -137,7 +139,7 @@ namespace LOGICA.LPrestamos
             }
         }
         public static bool insertPrestamo(int cliId, int fonId, int regId, float preMontoAprovado, int perId, int prePlazoMeses,
-            DateTime preFechaPago, float tasaInteres, DataGridView dataGrid)
+            DateTime preFechaPago, float tasaInteres, DataGridView dataGrid, float gastosAdmin, int cuotasNiveladas)
         {
             int usuId = validaciones.idUsuarioSesion();
             string usuNick = validaciones.nickUsuario();
@@ -164,6 +166,8 @@ namespace LOGICA.LPrestamos
             SqlCmd.Parameters.AddWithValue("@prePlazoMeses", prePlazoMeses);
             SqlCmd.Parameters.AddWithValue("@preFechaPago", preFechaPago);
             SqlCmd.Parameters.AddWithValue("@preFechaFinaliza", fechaFinaliza);
+            SqlCmd.Parameters.AddWithValue("@preGastosAdministrativos", gastosAdmin);
+            SqlCmd.Parameters.AddWithValue("@preCuotasNiveladas", cuotasNiveladas);
             SqlCmd.Parameters.AddWithValue("accion", "INS_PRESTAMOS");
 
             var id = SqlCmd.ExecuteScalar();
@@ -246,6 +250,27 @@ namespace LOGICA.LPrestamos
                 sqlDA.SelectCommand.CommandType = CommandType.StoredProcedure;
                 sqlDA.SelectCommand.Parameters.AddWithValue("@preId", idPrestamo);
                 sqlDA.SelectCommand.Parameters.AddWithValue("accion", "SELECT_GRID_CLIENTE_CUOTAS_PRESTAMOS");
+                sqlDA.Fill(data);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"ERROR: \n {ex.ToString()}");
+            }
+            return data;
+        }
+
+        public static object ComprobarEstado(int idCuota, int preId)
+        {
+            conexion_db.getConnection();
+            DataTable data = new DataTable();
+            try
+            {
+                SqlDataAdapter sqlDA = new SqlDataAdapter("dbo.WWPrestamos", conexion_db.conexion);
+                sqlDA.SelectCommand.CommandType = CommandType.StoredProcedure;
+                sqlDA.SelectCommand.Parameters.AddWithValue("@cuoPrestamoId", idCuota);
+                sqlDA.SelectCommand.Parameters.AddWithValue("@preId", preId);
+                sqlDA.SelectCommand.Parameters.AddWithValue("accion", "COMPROBAR_ESTADO_PAGO_CUOTA_PRESTAMO");
                 sqlDA.Fill(data);
 
             }

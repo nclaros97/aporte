@@ -39,8 +39,6 @@ namespace SistemaPrestamos.Prestamos
             CargarComboTipoFondos();
             CargarComboRegionales();
 
-            //CARGAR COMBOBOX DE TIPOS DE FONDOS
-
             //desabilitar botones
             foreach (Control item in this.Controls)
             {
@@ -67,26 +65,76 @@ namespace SistemaPrestamos.Prestamos
                 cbFondos.Enabled = false;
                 cbRegional.Enabled = false;
                 btnNuevo.Enabled = false;
+                txtGastiAdmin.Enabled = false;
+                ckbCuotasNiveladas.Enabled = false;
                 GridDetallePresmosCliente.DataSource = scriptPrestamos.getDataCuotasPrestamosClientes(idPrestamo);
                 GridDetallePresmosCliente.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
                 GridDetallePresmosCliente.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+                GridDetallePresmosCliente.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
                 GridDetallePresmosCliente.Columns[4].DefaultCellStyle.Format = "N";
 
                 GridDetallePresmosCliente.Columns[5].DefaultCellStyle.Format = "N";
                 GridDetallePresmosCliente.Columns[6].DefaultCellStyle.Format = "N";
                 GridDetallePresmosCliente.Columns[7].DefaultCellStyle.Format = "N";
                 GridDetallePresmosCliente.Columns[8].DefaultCellStyle.Format = "N";
+
+                GridDetallePresmosCliente.Columns[11].Visible = false;
+                GridDetallePresmosCliente.Columns[12].Visible = false;
+
+                backgroundCuotas();
             }
             else
             {
                 lblNoTransaccion.Visible = false;
                 btnPagar.Visible = false;
                 txtNoTransaccion.Visible = false;
+                lblMontoTransaccion.Visible = false;
+                txtMontoTransaccionRecibido.Visible = false;
             }
 
         }
 
+        private void backgroundCuotas()
+        {
+            for (int i = 0; i < GridDetallePresmosCliente.Rows.Count - 1; i++)
+            {
+                var rows = GridDetallePresmosCliente.Rows[i];
+                //comprobar el estado de los pagos
+                scriptPrestamos.ComprobarEstado(int.Parse(rows.Cells[11].Value.ToString()), int.Parse(rows.Cells[12].Value.ToString()));
+                if (rows.Cells[13].Value.Equals("PAGADO"))
+                {
+                    for (int j = 0; j < rows.Cells.Count; j++)
+                    {
+                        var cells = rows.Cells[j];
+                        cells.Style.ForeColor = Color.White;
+                        cells.Style.BackColor = Color.Red;
+                    }
+                }
+                if (rows.Cells[13].Value.Equals("PENDIENTE"))
+                {
+                    for (int j = 0; j < rows.Cells.Count; j++)
+                    {
+                        var cells = rows.Cells[j];
 
+                    }
+                }
+                if (rows.Cells[13].Value.Equals("ATRASADO"))
+                {
+                    rows.Cells[0].Value = "56454";
+                    rows.Cells[0].Style.ForeColor = Color.Red;
+                    for (int j = 0; j < rows.Cells.Count; j++)
+                    {
+                        var cells = rows.Cells[j];
+                        GridDetallePresmosCliente.Rows[0].Cells[0].Style.ForeColor = Color.White;
+                        GridDetallePresmosCliente.Rows[0].Cells[0].Style.BackColor = Color.Red;
+                        cells.Style.BackColor = Color.Green;
+                        GridDetallePresmosCliente.CellFormatting += new DataGridViewCellFormattingEventHandler(this.GridDetallePresmosCliente_CellFormatting); this.Controls.Add(GridDetallePresmosCliente);
+                    }
+                }
+            }
+        }
+        
+       
         private void CargarComboTipoFondos()
         {
             try
@@ -99,6 +147,28 @@ namespace SistemaPrestamos.Prestamos
             {
                 MessageBox.Show($"ERROR: \n {ex.Message.ToString()}");
             }
+        }
+
+        private void GridDetallePresmosCliente_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e) 
+        {
+            DataGridView dgv = sender as DataGridView;
+            
+            if (e.Value != null && e.Value.ToString().Trim() == "ATRASADO") 
+            { 
+                dgv.Rows[e.RowIndex].Cells["ESTADO"].Style.BackColor = Color.Red;
+                dgv.Rows[e.RowIndex].Cells["ESTADO"].Style.ForeColor = Color.White;
+            }
+            if (e.Value != null && e.Value.ToString().Trim() == "PENDIENTE")
+            { 
+                dgv.Rows[e.RowIndex].Cells["ESTADO"].Style.BackColor = Color.Orange;
+                dgv.Rows[e.RowIndex].Cells["ESTADO"].Style.ForeColor = Color.White;
+            }
+            if (e.Value != null && e.Value.ToString().Trim() == "PAGADO")
+            {
+                dgv.Rows[e.RowIndex].Cells["ESTADO"].Style.BackColor = Color.Green;
+                dgv.Rows[e.RowIndex].Cells["ESTADO"].Style.ForeColor = Color.White;
+            }
+
         }
 
         private void CargarComboRegionales()
@@ -118,22 +188,7 @@ namespace SistemaPrestamos.Prestamos
 
         private void Form3_Closed(object sender, EventArgs e)
         {
-            //GridDetallePresmosCliente.DataSource = scriptClientes.getDataCliente();
-        }
-
-        private void txtClienteId_Leave(object sender, EventArgs e)
-        {
-            if (txtClienteId.AutoCompleteCustomSource.Contains(txtClienteId.Text))
-            {
-                
-            }
-        }
-
-        public void SetDataCliente(string Id, string Nombre)
-        {
-            MessageBox.Show(Id + " " + Nombre);
-            txtClienteId.Text = Id;
-            txtClienteNombre.Text = Nombre;
+            GridDetallePresmosCliente.DataSource = scriptPrestamos.getDataPrestamosClientes();
         }
 
         private void txtClienteId_KeyPress(object sender, KeyPressEventArgs e)
@@ -154,24 +209,9 @@ namespace SistemaPrestamos.Prestamos
             }
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             txtDiaFechaPagoMensual.Text = dateTimePicker1.Value.Day.ToString() + " de cada mes";
-        }
-
-        private void txtClienteId_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void txtClienteId_Leave_1(object sender, EventArgs e)
@@ -191,11 +231,11 @@ namespace SistemaPrestamos.Prestamos
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            if (busqueda)
+            if (!busqueda)
             {
               bool creado = scriptPrestamos.insertPrestamo(int.Parse(txtClienteId.Text),int.Parse(cbFondos.SelectedValue.ToString()),int.Parse(cbRegional.SelectedValue.ToString()),
                     float.Parse(txtMontoOtorgado.Text), (int)PeriodosEnum.Mensual,int.Parse(txtPlazoMeses.Text),dateTimePicker1.Value,
-                    float.Parse(txtPorcentajeTasaInteres.Text), GridDetallePresmosCliente);
+                    float.Parse(txtPorcentajeTasaInteres.Text), GridDetallePresmosCliente, float.Parse(txtGastiAdmin.Text), ckbCuotasNiveladas.Checked ==true? 1:0);
                 if (creado)
                 {
                     //this.Close();
@@ -213,9 +253,9 @@ namespace SistemaPrestamos.Prestamos
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            if (txtNoTransaccion.Text.Equals(""))
+            if (txtNoTransaccion.Text.Equals("") || txtMontoTransaccionRecibido.Text.Equals(""))
             {
-                MessageBox.Show(null, "Ingrese el numero transaccion", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(null, "Ingrese el numero y/ó el monto de la transacción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if(GridDetallePresmosCliente.SelectedRows.Count == 0)

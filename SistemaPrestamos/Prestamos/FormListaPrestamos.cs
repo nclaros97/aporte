@@ -80,8 +80,11 @@ namespace SistemaPrestamos.Prestamos
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+
             if (GridPresmosCliente.SelectedRows.Count > 0)
             {
+                DataTable prestamo = scriptPrestamos.getDataPrestamoClienteId(int.Parse(GridPresmosCliente.CurrentRow.Cells[10].Value.ToString()));
+
                 FormMantPrestamos hijo = new FormMantPrestamos();
                 AddOwnedForm(hijo);
                 hijo.FormBorderStyle = FormBorderStyle.None;
@@ -91,9 +94,17 @@ namespace SistemaPrestamos.Prestamos
                 this.Controls.Add(hijo);
                 this.Tag = hijo;
                 hijo.busqueda = true;
-                hijo.txtClienteId.Text = GridPresmosCliente.CurrentRow.Cells[11].Value.ToString();
-                hijo.txtClienteNombre.Text = GridPresmosCliente.CurrentRow.Cells[0].Value.ToString();
-                hijo.idPrestamo = int.Parse(GridPresmosCliente.CurrentRow.Cells[10].Value.ToString());
+                hijo.txtClienteId.Text = prestamo.Rows[0]["CLIID"].ToString();
+                hijo.txtClienteNombre.Text = prestamo.Rows[0]["NOMBRE"].ToString();
+                hijo.idPrestamo = int.Parse(prestamo.Rows[0]["ID"].ToString());
+                hijo.cbFondos.SelectedItem = prestamo.Rows[0]["fonId"].ToString();
+                hijo.cbRegional.SelectedItem = prestamo.Rows[0]["regId"].ToString();
+                hijo.txtPorcentajeTasaInteres.Text = prestamo.Rows[0]["INTERES"].ToString();
+                hijo.txtPlazoMeses.Text = prestamo.Rows[0]["PLAZO"].ToString();
+                hijo.txtGastiAdmin.Text = prestamo.Rows[0]["GASTOADM"].ToString();
+                hijo.txtMontoOtorgado.Text = prestamo.Rows[0]["MONTO L"].ToString();
+                hijo.dateTimePicker1.Value = DateTime.Parse(prestamo.Rows[0]["PAGO INICIAL"].ToString());
+                hijo.ckbCuotasNiveladas.Checked = (prestamo.Rows[0]["CN"].ToString().Equals("1"))? true:false;
                 hijo.BringToFront();
                 hijo.Show();
             }
