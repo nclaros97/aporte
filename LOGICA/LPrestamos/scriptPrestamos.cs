@@ -138,8 +138,8 @@ namespace LOGICA.LPrestamos
                 MessageBox.Show(errorMessages.ToString());
             }
         }
-        public static bool insertPrestamo(int cliId, int fonId, int regId, float preMontoAprovado, int perId, int prePlazoMeses,
-            DateTime preFechaPago, float tasaInteres, DataGridView dataGrid, float gastosAdmin, int cuotasNiveladas)
+        public static int insertPrestamo(int cliId, int fonId, int regId, decimal preMontoAprovado, int perId, int prePlazoMeses,
+            DateTime preFechaPago, decimal tasaInteres, DataGridView dataGrid, decimal gastosAdmin, decimal interesMoratorio)
         {
             int usuId = validaciones.idUsuarioSesion();
             string usuNick = validaciones.nickUsuario();
@@ -147,7 +147,7 @@ namespace LOGICA.LPrestamos
             if(usuId == 0 || usuNick.Equals(""))
             {
                 MessageBox.Show(null, "Se necesita una sesión activa", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
+                return -1;
             }
 
             DateTime fechaFinaliza = new DateTime(preFechaPago.Year, preFechaPago.Month, preFechaPago.Day);
@@ -165,79 +165,124 @@ namespace LOGICA.LPrestamos
             SqlCmd.Parameters.AddWithValue("@perId", perId);
             SqlCmd.Parameters.AddWithValue("@prePlazoMeses", prePlazoMeses);
             SqlCmd.Parameters.AddWithValue("@preFechaPago", preFechaPago);
+            SqlCmd.Parameters.AddWithValue("@prePorcentajeInteres", tasaInteres);
             SqlCmd.Parameters.AddWithValue("@preFechaFinaliza", fechaFinaliza);
             SqlCmd.Parameters.AddWithValue("@preGastosAdministrativos", gastosAdmin);
-            SqlCmd.Parameters.AddWithValue("@preCuotasNiveladas", cuotasNiveladas);
+            SqlCmd.Parameters.AddWithValue("@preInteresMoratorio", interesMoratorio);
             SqlCmd.Parameters.AddWithValue("accion", "INS_PRESTAMOS");
 
             var id = SqlCmd.ExecuteScalar();
             int idPrestamo = int.Parse(id.ToString());
 
-            float saldo = preMontoAprovado;
-            float valorCiclo = (preMontoAprovado / prePlazoMeses);
-    
-            for (int i = 0; i < prePlazoMeses; i++)
-            {
-                DateTime fechaPagoCuota = new DateTime(preFechaPago.Year,preFechaPago.Month,preFechaPago.Day);
-                fechaPagoCuota = fechaPagoCuota.AddMonths(i);
-                if (i == 0)
-                {
-                    float interes = ((saldo * ((tasaInteres / 100)) / 365)* 30);
+            //float saldo = preMontoAprovado;
+            //float valorCiclo = (preMontoAprovado / prePlazoMeses);
 
-                    try
-                    {
-                        insertCuotaPrestamo(idPrestamo, fechaPagoCuota, valorCiclo, saldo, interes, (interes + valorCiclo));
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show(null, "Error al crear las cuotas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    saldo -= (preMontoAprovado / prePlazoMeses);
-                    float interes = ((saldo * ((tasaInteres / 100)) / 365) * 30);
 
-                    try
-                    {
-                        insertCuotaPrestamo(idPrestamo, fechaPagoCuota, valorCiclo, saldo, interes, (interes + valorCiclo));
-                    }
-                    catch (Exception)
-                    {
-                        MessageBox.Show(null, "Error al crear las cuotas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
+            //DateTime fechaPagoCuota = new DateTime(preFechaPago.Year, preFechaPago.Month, preFechaPago.Day);
+            
+            //float interes = ((saldo * ((tasaInteres / 100)) / 365) * 30);
 
-            dataGrid.DataSource = getDataCuotasPrestamosClientes(idPrestamo);
+            //try
+            //{
+            //    insertCuotaPrestamo(idPrestamo, fechaPagoCuota, valorCiclo, saldo, interes, (interes + valorCiclo));
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show(null, "Error al crear las cuotas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
-            dataGrid.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
-            dataGrid.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-            dataGrid.Columns[4].DefaultCellStyle.Format = "N";
+            //dataGrid.DataSource = getDataCuotasPrestamosClientes(idPrestamo);
 
-            dataGrid.Columns[5].DefaultCellStyle.Format = "N";
-            dataGrid.Columns[6].DefaultCellStyle.Format = "N";
-            dataGrid.Columns[7].DefaultCellStyle.Format = "N";
-            dataGrid.Columns[8].DefaultCellStyle.Format = "N";
+            //dataGrid.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+            //dataGrid.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
+            //dataGrid.Columns[4].DefaultCellStyle.Format = "N";
+
+            //dataGrid.Columns[5].DefaultCellStyle.Format = "N";
+            //dataGrid.Columns[6].DefaultCellStyle.Format = "N";
+            //dataGrid.Columns[7].DefaultCellStyle.Format = "N";
+            //dataGrid.Columns[8].DefaultCellStyle.Format = "N";
 
             MessageBox.Show($"Prestamo Creado satisfactoriamente!");
 
-            return true;
+            return idPrestamo;
         }
 
-        private static void insertCuotaPrestamo(int idPrestamo, DateTime fechaPago, float valorCiclo, float saldo, float interes, float totalCiclo)
+        private static void insertCuotaPrestamo(int idPrestamo, DateTime fechaPagoCuota, float valorCiclo, float saldo, float interes, float v)
         {
             conexion_db.getConnection();
             SqlCommand SqlCmd = new SqlCommand("dbo.WWPrestamos", conexion_db.conexion);
             SqlCmd.CommandType = CommandType.StoredProcedure;
             SqlCmd.Parameters.AddWithValue("@preId", idPrestamo);
-            SqlCmd.Parameters.AddWithValue("@cuoPrestamoFechaPago", fechaPago);
+            SqlCmd.Parameters.AddWithValue("@cuoPrestamoFechaPago", fechaPagoCuota);
             SqlCmd.Parameters.AddWithValue("@cuoPrestamoValorCiclo", valorCiclo);
             SqlCmd.Parameters.AddWithValue("@cuoPrestamoSaldo", saldo);
             SqlCmd.Parameters.AddWithValue("@cuoPrestamoIntereses", interes);
-            SqlCmd.Parameters.AddWithValue("@couPrestamoTotalPagarCiclo", totalCiclo);
-            SqlCmd.Parameters.AddWithValue("accion", "INS_PRESTAMOS_CUOTAS");
+            SqlCmd.Parameters.AddWithValue("@couPrestamoTotalPagarCiclo", v);
+            SqlCmd.Parameters.AddWithValue("accion", "INS_PRESTAMOS_PRIMERA_CUOTA");
             SqlCmd.ExecuteNonQuery();
+        }
+
+        public static bool insertCuotaPrestamo(int idPrestamo, string noTransaccion, decimal montoTransaccionRecibido)
+        {
+            try
+            {
+                conexion_db.getConnection();
+                SqlCommand SqlCmd = new SqlCommand("dbo.WWPrestamos", conexion_db.conexion);
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.AddWithValue("@preId", idPrestamo);
+                SqlCmd.Parameters.AddWithValue("@cuoPrestamoNumeroTransaccion", noTransaccion);
+                SqlCmd.Parameters.AddWithValue("@couPrestamoTotalPagarCiclo", montoTransaccionRecibido);
+                SqlCmd.Parameters.AddWithValue("accion", "INS_PRESTAMOS_CUOTAS");
+                SqlCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error {ex.Message} \n {ex.StackTrace}");
+                return false;
+            }
+            return true;
+        }
+
+        public static string getValorCiclo(int idPrestamo)
+        {
+            string valorPagar = "0";
+            try
+            {
+                conexion_db.getConnection();
+                SqlCommand SqlCmd = new SqlCommand("dbo.WWPrestamos", conexion_db.conexion);
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.AddWithValue("@preId", idPrestamo);
+                SqlCmd.Parameters.AddWithValue("accion", "GET_VALOR_CICLO_PRESTAMO");
+                valorPagar = Convert.ToString(Math.Round(decimal.Parse(SqlCmd.ExecuteScalar().ToString()),2));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error {ex.Message} \n {ex.StackTrace}");
+                return valorPagar;
+            }
+            return valorPagar;
+        }
+
+        public static bool esMontoValidoAPagar(int idPrestamo, decimal totalMontoPagar)
+        {
+            bool esValido = false;
+            try
+            {
+                conexion_db.getConnection();
+                SqlCommand SqlCmd = new SqlCommand("dbo.WWPrestamos", conexion_db.conexion);
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+                SqlCmd.Parameters.AddWithValue("@preId", idPrestamo);
+                SqlCmd.Parameters.AddWithValue("@couPrestamoTotalPagarCiclo", totalMontoPagar);
+                SqlCmd.Parameters.AddWithValue("accion", "COMPROBAR_MONTO_PAGAR");
+                string resultado = SqlCmd.ExecuteScalar().ToString();
+                esValido = bool.Parse(resultado);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error {ex.Message} \n {ex.StackTrace}");
+                return esValido;
+            }
+            return esValido;
         }
 
         public static object getDataCuotasPrestamosClientes(int idPrestamo)

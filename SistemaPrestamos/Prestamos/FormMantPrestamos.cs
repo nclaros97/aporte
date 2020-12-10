@@ -35,7 +35,6 @@ namespace SistemaPrestamos.Prestamos
 
         private void FormListaPrestamos_Load(object sender, EventArgs e)
         {
-
             CargarComboTipoFondos();
             CargarComboRegionales();
 
@@ -64,24 +63,25 @@ namespace SistemaPrestamos.Prestamos
                 txtPlazoMeses.Enabled = false;
                 cbFondos.Enabled = false;
                 cbRegional.Enabled = false;
+                dateTimePicker1.Enabled = false;
                 btnNuevo.Enabled = false;
+                txtInteresMoratorio.Enabled = false;
                 txtGastiAdmin.Enabled = false;
-                ckbCuotasNiveladas.Enabled = false;
                 GridDetallePresmosCliente.DataSource = scriptPrestamos.getDataCuotasPrestamosClientes(idPrestamo);
-                GridDetallePresmosCliente.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
-                GridDetallePresmosCliente.Columns[2].DefaultCellStyle.Format = "dd/MM/yyyy";
-                GridDetallePresmosCliente.Columns[3].DefaultCellStyle.Format = "dd/MM/yyyy";
-                GridDetallePresmosCliente.Columns[4].DefaultCellStyle.Format = "N";
-
-                GridDetallePresmosCliente.Columns[5].DefaultCellStyle.Format = "N";
-                GridDetallePresmosCliente.Columns[6].DefaultCellStyle.Format = "N";
-                GridDetallePresmosCliente.Columns[7].DefaultCellStyle.Format = "N";
-                GridDetallePresmosCliente.Columns[8].DefaultCellStyle.Format = "N";
-
-                GridDetallePresmosCliente.Columns[11].Visible = false;
-                GridDetallePresmosCliente.Columns[12].Visible = false;
-
-                backgroundCuotas();
+                GridDetallePresmosCliente.Columns[0].DefaultCellStyle.Format = "dd/MM/yyyy";
+                GridDetallePresmosCliente.Columns[2].DefaultCellStyle.Format = "N2";
+                GridDetallePresmosCliente.Columns[3].DefaultCellStyle.Format = "N2";
+                GridDetallePresmosCliente.Columns[4].DefaultCellStyle.Format = "N2";
+                GridDetallePresmosCliente.Columns[5].DefaultCellStyle.Format = "N2";
+                GridDetallePresmosCliente.Columns[6].DefaultCellStyle.Format = "N2";
+                GridDetallePresmosCliente.Columns[7].DefaultCellStyle.Format = "N2";
+                txtValorClicloPagar.Text = Math.Round(decimal.Parse(scriptPrestamos.getValorCiclo(idPrestamo)),2).ToString();
+                if (txtValorClicloPagar.Text.Equals("0"))
+                {
+                    txtNoTransaccion.Enabled = false;
+                    txtMontoTransaccionRecibido.Enabled = false;
+                    btnPagar.Enabled = false;
+                }
             }
             else
             {
@@ -92,6 +92,7 @@ namespace SistemaPrestamos.Prestamos
                 txtMontoTransaccionRecibido.Visible = false;
             }
 
+            RecalcularValorAPagar();
         }
 
         private void backgroundCuotas()
@@ -99,8 +100,6 @@ namespace SistemaPrestamos.Prestamos
             for (int i = 0; i < GridDetallePresmosCliente.Rows.Count - 1; i++)
             {
                 var rows = GridDetallePresmosCliente.Rows[i];
-                //comprobar el estado de los pagos
-                scriptPrestamos.ComprobarEstado(int.Parse(rows.Cells[11].Value.ToString()), int.Parse(rows.Cells[12].Value.ToString()));
                 if (rows.Cells[13].Value.Equals("PAGADO"))
                 {
                     for (int j = 0; j < rows.Cells.Count; j++)
@@ -233,17 +232,22 @@ namespace SistemaPrestamos.Prestamos
         {
             if (!busqueda)
             {
-              bool creado = scriptPrestamos.insertPrestamo(int.Parse(txtClienteId.Text),int.Parse(cbFondos.SelectedValue.ToString()),int.Parse(cbRegional.SelectedValue.ToString()),
-                    float.Parse(txtMontoOtorgado.Text), (int)PeriodosEnum.Mensual,int.Parse(txtPlazoMeses.Text),dateTimePicker1.Value,
-                    float.Parse(txtPorcentajeTasaInteres.Text), GridDetallePresmosCliente, float.Parse(txtGastiAdmin.Text), ckbCuotasNiveladas.Checked ==true? 1:0);
-                if (creado)
+              int creado = scriptPrestamos.insertPrestamo(int.Parse(txtClienteId.Text),int.Parse(cbFondos.SelectedValue.ToString()),int.Parse(cbRegional.SelectedValue.ToString()),
+                    Math.Round(decimal.Parse(txtMontoOtorgado.Text),2), (int)PeriodosEnum.Mensual,int.Parse(txtPlazoMeses.Text),dateTimePicker1.Value,
+                    Math.Round(decimal.Parse(txtPorcentajeTasaInteres.Text),2), GridDetallePresmosCliente, Math.Round(decimal.Parse(txtGastiAdmin.Text),2), Math.Round(decimal.Parse(txtInteresMoratorio.Text),2));
+                if (creado>0)
                 {
-                    //this.Close();
+                    idPrestamo = creado;
+                    txtNoTransaccion.Visible = true;
+                    txtMontoTransaccionRecibido.Visible = true;
+                    btnPagar.Visible = true;
+                    GridDetallePresmosCliente.DataSource = scriptPrestamos.getDataCuotasPrestamosClientes(creado);
                 }
                 else
                 {
                     MessageBox.Show(null, "Error al insertar registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                txtValorClicloPagar.Text = scriptPrestamos.getValorCiclo(idPrestamo);
             }
             else
             {
@@ -258,17 +262,40 @@ namespace SistemaPrestamos.Prestamos
                 MessageBox.Show(null, "Ingrese el numero y/ó el monto de la transacción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if(GridDetallePresmosCliente.SelectedRows.Count == 0)
+            if (scriptPrestamos.esMontoValidoAPagar(idPrestamo, Math.Round(decimal.Parse(txtMontoTransaccionRecibido.Text),2)) == false)
             {
-                MessageBox.Show(null, "Seleccione la fila de la cuota a pagar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(null, "El monto a pagar no es válido\n Excede el saldo pendiente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (GridDetallePresmosCliente.SelectedRows.Count > 1)
+            if (scriptPrestamos.insertCuotaPrestamo(idPrestamo,txtNoTransaccion.Text, decimal.Parse(txtMontoTransaccionRecibido.Text)))
             {
-                MessageBox.Show(null, "Seleccione la fila de la cuota a pagar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show(null, "Pagado", "Pagado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RecalcularValorAPagar();
+                GridDetallePresmosCliente.DataSource = scriptPrestamos.getDataCuotasPrestamosClientes(idPrestamo);
             }
-            MessageBox.Show(null, "Pagado", "Pagado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void RecalcularValorAPagar()
+        {
+            txtValorClicloPagar.Text = scriptPrestamos.getValorCiclo(idPrestamo);
+            txtNoTransaccion.Text = "";
+            txtMontoTransaccionRecibido.Text = "";
+            if (txtValorClicloPagar.Text.Equals("0.00"))
+            {
+                txtMontoTransaccionRecibido.Enabled = false;
+                txtNoTransaccion.Enabled = false;
+                btnPagar.Enabled = false;
+            }
+        }
+
+        private void txtValorClicloPagar_Click(object sender, EventArgs e)
+        {
+            txtMontoTransaccionRecibido.Text = txtValorClicloPagar.Text;
+        }
+
+        private void txtValorClicloPagar_TextChanged(object sender, EventArgs e)
+        {
+            RecalcularValorAPagar();
         }
     }
 }

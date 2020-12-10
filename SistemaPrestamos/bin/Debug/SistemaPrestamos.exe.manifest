@@ -42,38 +42,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DATOS.dll" size="7680">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DATOS.dll" size="8704">
       <assemblyIdentity name="DATOS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aFfi//wTartXjeg1+jQucsLdl2MGTeFEZP8TT/KXObI=</dsig:DigestValue>
+        <dsig:DigestValue>NoydW8lXUfVjp1XLvw1MhtkDOYkhBpDJOnbWCk085Ys=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LOGICA.dll" size="38912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LOGICA.dll" size="43520">
       <assemblyIdentity name="LOGICA" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mtXcibCYu9LvPDQuG2N1P+QorInUy9H3xAPcwAXgDAg=</dsig:DigestValue>
+        <dsig:DigestValue>IL/KoqjW69e2/JhQk/78Dn7bds6SSWqL8se6xIAPsCc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaPrestamos.exe" size="993280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaPrestamos.exe" size="920064">
       <assemblyIdentity name="SistemaPrestamos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LNIu7BXizHuqsTAFra1dnB5Jxj6kdhB0jEByYSTXqvQ=</dsig:DigestValue>
+        <dsig:DigestValue>rhGqn2nG5uJxV90nCsCb0Yu8a49Tri5y4tlOEp8pHJ0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

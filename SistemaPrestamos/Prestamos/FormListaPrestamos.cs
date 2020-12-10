@@ -104,7 +104,7 @@ namespace SistemaPrestamos.Prestamos
                 hijo.txtGastiAdmin.Text = prestamo.Rows[0]["GASTOADM"].ToString();
                 hijo.txtMontoOtorgado.Text = prestamo.Rows[0]["MONTO L"].ToString();
                 hijo.dateTimePicker1.Value = DateTime.Parse(prestamo.Rows[0]["PAGO INICIAL"].ToString());
-                hijo.ckbCuotasNiveladas.Checked = (prestamo.Rows[0]["CN"].ToString().Equals("1"))? true:false;
+                hijo.txtInteresMoratorio.Text = prestamo.Rows[0]["preInteresMoratorio"].ToString();
                 hijo.BringToFront();
                 hijo.Show();
             }

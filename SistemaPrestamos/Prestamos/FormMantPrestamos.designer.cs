@@ -55,9 +55,13 @@
             this.lblNoTransaccion = new System.Windows.Forms.Label();
             this.txtGastiAdmin = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.ckbCuotasNiveladas = new System.Windows.Forms.CheckBox();
             this.lblMontoTransaccion = new System.Windows.Forms.Label();
             this.txtMontoTransaccionRecibido = new System.Windows.Forms.TextBox();
+            this.btnMostrarReporte = new System.Windows.Forms.Button();
+            this.txtValorClicloPagar = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtInteresMoratorio = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.GridDetallePresmosCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,7 +197,7 @@
             // txtMontoOtorgado
             // 
             this.txtMontoOtorgado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtMontoOtorgado.Location = new System.Drawing.Point(596, 98);
+            this.txtMontoOtorgado.Location = new System.Drawing.Point(594, 137);
             this.txtMontoOtorgado.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoOtorgado.Name = "txtMontoOtorgado";
             this.txtMontoOtorgado.Size = new System.Drawing.Size(76, 20);
@@ -202,7 +206,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(595, 81);
+            this.label4.Location = new System.Drawing.Point(593, 120);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 13);
@@ -212,7 +216,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(594, 118);
+            this.label5.Location = new System.Drawing.Point(593, 158);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
@@ -222,7 +226,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(597, 133);
+            this.dateTimePicker1.Location = new System.Drawing.Point(596, 173);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
@@ -232,7 +236,7 @@
             // txtDiaFechaPagoMensual
             // 
             this.txtDiaFechaPagoMensual.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtDiaFechaPagoMensual.Location = new System.Drawing.Point(702, 133);
+            this.txtDiaFechaPagoMensual.Location = new System.Drawing.Point(702, 173);
             this.txtDiaFechaPagoMensual.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaFechaPagoMensual.Name = "txtDiaFechaPagoMensual";
             this.txtDiaFechaPagoMensual.ReadOnly = true;
@@ -277,7 +281,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 164);
+            this.label7.Location = new System.Drawing.Point(7, 165);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
@@ -347,16 +351,6 @@
             this.label8.TabIndex = 42;
             this.label8.Text = "Gastos Administrativos";
             // 
-            // ckbCuotasNiveladas
-            // 
-            this.ckbCuotasNiveladas.AutoSize = true;
-            this.ckbCuotasNiveladas.Location = new System.Drawing.Point(599, 177);
-            this.ckbCuotasNiveladas.Name = "ckbCuotasNiveladas";
-            this.ckbCuotasNiveladas.Size = new System.Drawing.Size(109, 17);
-            this.ckbCuotasNiveladas.TabIndex = 44;
-            this.ckbCuotasNiveladas.Text = "Coutas Niveladas";
-            this.ckbCuotasNiveladas.UseVisualStyleBackColor = true;
-            // 
             // lblMontoTransaccion
             // 
             this.lblMontoTransaccion.AutoSize = true;
@@ -377,6 +371,63 @@
             this.txtMontoTransaccionRecibido.Size = new System.Drawing.Size(191, 29);
             this.txtMontoTransaccionRecibido.TabIndex = 45;
             // 
+            // btnMostrarReporte
+            // 
+            this.btnMostrarReporte.AccessibleName = "Insertar";
+            this.btnMostrarReporte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(177)))), ((int)(((byte)(17)))));
+            this.btnMostrarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarReporte.ForeColor = System.Drawing.Color.White;
+            this.btnMostrarReporte.Location = new System.Drawing.Point(596, 277);
+            this.btnMostrarReporte.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMostrarReporte.Name = "btnMostrarReporte";
+            this.btnMostrarReporte.Size = new System.Drawing.Size(114, 30);
+            this.btnMostrarReporte.TabIndex = 47;
+            this.btnMostrarReporte.Text = "Mostrar Reporte";
+            this.btnMostrarReporte.UseVisualStyleBackColor = false;
+            // 
+            // txtValorClicloPagar
+            // 
+            this.txtValorClicloPagar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtValorClicloPagar.BackColor = System.Drawing.Color.Chartreuse;
+            this.txtValorClicloPagar.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtValorClicloPagar.Location = new System.Drawing.Point(116, 209);
+            this.txtValorClicloPagar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorClicloPagar.Name = "txtValorClicloPagar";
+            this.txtValorClicloPagar.ReadOnly = true;
+            this.txtValorClicloPagar.Size = new System.Drawing.Size(95, 20);
+            this.txtValorClicloPagar.TabIndex = 48;
+            this.txtValorClicloPagar.Click += new System.EventHandler(this.txtValorClicloPagar_Click);
+            this.txtValorClicloPagar.TextChanged += new System.EventHandler(this.txtValorClicloPagar_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 212);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 13);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "Valor cliclo a pagar: ";
+            // 
+            // txtInteresMoratorio
+            // 
+            this.txtInteresMoratorio.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.txtInteresMoratorio.Location = new System.Drawing.Point(594, 98);
+            this.txtInteresMoratorio.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInteresMoratorio.Name = "txtInteresMoratorio";
+            this.txtInteresMoratorio.Size = new System.Drawing.Size(76, 20);
+            this.txtInteresMoratorio.TabIndex = 51;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(592, 81);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 13);
+            this.label10.TabIndex = 50;
+            this.label10.Text = "Interes moratorio";
+            // 
             // FormMantPrestamos
             // 
             this.AccessibleName = "Formulario Clientes";
@@ -384,9 +435,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(870, 677);
+            this.Controls.Add(this.txtInteresMoratorio);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtValorClicloPagar);
+            this.Controls.Add(this.btnMostrarReporte);
             this.Controls.Add(this.lblMontoTransaccion);
             this.Controls.Add(this.txtMontoTransaccionRecibido);
-            this.Controls.Add(this.ckbCuotasNiveladas);
             this.Controls.Add(this.txtGastiAdmin);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblNoTransaccion);
@@ -447,8 +502,12 @@
         private System.Windows.Forms.Label lblNoTransaccion;
         public System.Windows.Forms.TextBox txtGastiAdmin;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.CheckBox ckbCuotasNiveladas;
         private System.Windows.Forms.Label lblMontoTransaccion;
         public System.Windows.Forms.TextBox txtMontoTransaccionRecibido;
+        private System.Windows.Forms.Button btnMostrarReporte;
+        public System.Windows.Forms.TextBox txtValorClicloPagar;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.TextBox txtInteresMoratorio;
+        private System.Windows.Forms.Label label10;
     }
 }
