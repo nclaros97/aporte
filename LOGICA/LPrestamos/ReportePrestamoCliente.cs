@@ -17,15 +17,15 @@ namespace LOGICA.LPrestamos
             fechaReporte = DateTime.Now;
             preId = _preId;
             var prestamoDao = new PrestamoDao();
-            var resultado = prestamoDao.getPrestamoCliente(preId);
+            var resultado = scriptPrestamos.getPrestamoCliente(preId);
 
             cuotasPrestamos = new List<CuotasPrestamo>();
             foreach (DataRow row in resultado.Rows)
             {
                 var cuota = new CuotasPrestamo()
                 {
-                    preId = int.Parse(row[0].ToString()),
-                    cliente = row[10].ToString(),
+                    preId = int.Parse(row[10].ToString()),
+                    cliente = row[0].ToString(),
                     cliRTN = row[1].ToString()
 
                 };

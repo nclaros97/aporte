@@ -3,6 +3,7 @@ using LOGICA.LPrestamos;
 using LOGICA.LUsuarios;
 using SistemaPrestamos.Clientes;
 using SistemaPrestamos.Enums;
+using SistemaPrestamos.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -92,7 +93,6 @@ namespace SistemaPrestamos.Prestamos
                 txtMontoTransaccionRecibido.Visible = false;
             }
 
-            RecalcularValorAPagar();
         }
 
         private void backgroundCuotas()
@@ -296,6 +296,13 @@ namespace SistemaPrestamos.Prestamos
         private void txtValorClicloPagar_TextChanged(object sender, EventArgs e)
         {
             RecalcularValorAPagar();
+        }
+
+        private void btnMostrarReporte_Click(object sender, EventArgs e)
+        {
+            FormReportePrestamos reporte = new FormReportePrestamos();
+            reporte.preId = idPrestamo;
+            reporte.Show();
         }
     }
 }

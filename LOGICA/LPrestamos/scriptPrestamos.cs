@@ -98,7 +98,7 @@ namespace LOGICA.LPrestamos
                 SqlDataAdapter sqlDA = new SqlDataAdapter("dbo.WWPrestamos", conexion_db.conexion);
                 sqlDA.SelectCommand.CommandType = CommandType.StoredProcedure;
                 sqlDA.SelectCommand.Parameters.AddWithValue("@preId", preId);
-                sqlDA.SelectCommand.Parameters.AddWithValue("accion", "SELECT_GRID_CLIENTE_PRESTAMOS_ID");
+                sqlDA.SelectCommand.Parameters.AddWithValue("@accion", "SELECT_GRID_CLIENTE_PRESTAMOS_ID");
                 sqlDA.Fill(data);
 
             }
@@ -349,6 +349,20 @@ namespace LOGICA.LPrestamos
             MessageBox.Show($"Cliente: {nombres} {apellidos} Actualizado satisfactoriamente!");
 
             return true;
+        }
+
+        public static DataTable getPrestamoCliente(int preId)
+        {
+            conexion_db.getConnection();
+            DataTable data = new DataTable();
+
+            SqlDataAdapter sqlDA = new SqlDataAdapter("dbo.WWPrestamos", conexion_db.conexion);
+            sqlDA.SelectCommand.CommandType = CommandType.StoredProcedure;
+            sqlDA.SelectCommand.Parameters.AddWithValue("@preId", preId);
+            sqlDA.SelectCommand.Parameters.AddWithValue("@accion", "SELECT_REPORTE_PRESTAMO_CLIENTE");
+            sqlDA.Fill(data);
+
+            return data;
         }
     }
 }

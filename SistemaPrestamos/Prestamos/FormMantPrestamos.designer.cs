@@ -384,6 +384,7 @@
             this.btnMostrarReporte.TabIndex = 47;
             this.btnMostrarReporte.Text = "Mostrar Reporte";
             this.btnMostrarReporte.UseVisualStyleBackColor = false;
+            this.btnMostrarReporte.Click += new System.EventHandler(this.btnMostrarReporte_Click);
             // 
             // txtValorClicloPagar
             // 
