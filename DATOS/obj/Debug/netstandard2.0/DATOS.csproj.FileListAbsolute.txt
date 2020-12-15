@@ -79,7 +79,6 @@ C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practica
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\bin\Debug\netstandard2.0\Accessibility.xml
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\bin\Debug\netstandard2.0\System.Deployment.xml
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
-C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\obj\Debug\netstandard2.0\DATOS.csprojAssemblyReference.cache
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\obj\Debug\netstandard2.0\DATOS.AssemblyInfoInputs.cache
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\obj\Debug\netstandard2.0\DATOS.AssemblyInfo.cs
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\obj\Debug\netstandard2.0\DATOS.csproj.CoreCompileInputs.cache

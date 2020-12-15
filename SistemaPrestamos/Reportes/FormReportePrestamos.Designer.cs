@@ -32,29 +32,46 @@ namespace SistemaPrestamos.Reportes
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ReportePrestamoClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.PrestamoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CuotasPrestamoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ReportePrestamoClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrestamoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuotasPrestamoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "ReporteDePrestamoCliente";
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "ReportePrestamo";
             reportDataSource1.Value = this.ReportePrestamoClienteBindingSource;
-            reportDataSource2.Name = "Cuotas";
-            reportDataSource2.Value = this.ReportePrestamoClienteBindingSource;
+            reportDataSource2.Name = "Prestamo";
+            reportDataSource2.Value = this.PrestamoBindingSource;
+            reportDataSource3.Name = "Cuotas";
+            reportDataSource3.Value = this.CuotasPrestamoBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaPrestamos.Reportes.Prestamo.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(114, 4);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SistemaPrestamos.Reportes.ReportePrestamo.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(696, 571);
+            this.reportViewer1.Size = new System.Drawing.Size(810, 575);
             this.reportViewer1.TabIndex = 0;
             // 
             // ReportePrestamoClienteBindingSource
             // 
             this.ReportePrestamoClienteBindingSource.DataSource = typeof(LOGICA.LPrestamos.ReportePrestamoCliente);
+            // 
+            // PrestamoBindingSource
+            // 
+            this.PrestamoBindingSource.DataSource = typeof(LOGICA.LPrestamos.Prestamo);
+            // 
+            // CuotasPrestamoBindingSource
+            // 
+            this.CuotasPrestamoBindingSource.DataSource = typeof(LOGICA.LPrestamos.CuotasPrestamo);
             // 
             // FormReportePrestamos
             // 
@@ -66,6 +83,8 @@ namespace SistemaPrestamos.Reportes
             this.Text = "FormReportePrestamos";
             this.Load += new System.EventHandler(this.FormReportePrestamos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ReportePrestamoClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrestamoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CuotasPrestamoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,5 +93,7 @@ namespace SistemaPrestamos.Reportes
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource ReportePrestamoClienteBindingSource;
+        private System.Windows.Forms.BindingSource PrestamoBindingSource;
+        private System.Windows.Forms.BindingSource CuotasPrestamoBindingSource;
     }
 }

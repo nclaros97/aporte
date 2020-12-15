@@ -224,7 +224,7 @@
     <EmbeddedResource Include="Reportes\FormReportePrestamos.resx">
       <DependentUpon>FormReportePrestamos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\Prestamo.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportePrestamo.rdlc" />
     <EmbeddedResource Include="Usuarios\FormListaRoles.resx">
       <DependentUpon>FormListaRoles.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +244,8 @@
       <DependentUpon>FormMantUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\LOGICA.LPrestamos.CuotasPrestamo.datasource" />
+    <None Include="Properties\DataSources\LOGICA.LPrestamos.Prestamo.datasource" />
     <None Include="Properties\DataSources\LOGICA.LPrestamos.ReportePrestamoCliente.datasource" />
     <None Include="Properties\DataSources\LOGICA.LPrestamos.scriptPrestamos.datasource" />
     <None Include="Properties\Settings.settings">

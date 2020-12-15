@@ -30,6 +30,8 @@ namespace SistemaPrestamos.Reportes
             reporte.crearReportePrestamo(preId);
 
             ReportePrestamoClienteBindingSource.DataSource = reporte;
+            PrestamoBindingSource.DataSource = reporte.prestamo;
+            CuotasPrestamoBindingSource.DataSource = reporte.cuotasPrestamos;
             this.reportViewer1.RefreshReport();
         }
     }
