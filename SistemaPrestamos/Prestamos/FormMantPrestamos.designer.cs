@@ -130,10 +130,10 @@
             // 
             this.txtClienteId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtClienteId.Location = new System.Drawing.Point(9, 100);
-            this.txtClienteId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtClienteId.Margin = new System.Windows.Forms.Padding(2);
             this.txtClienteId.Name = "txtClienteId";
             this.txtClienteId.Size = new System.Drawing.Size(76, 20);
-            this.txtClienteId.TabIndex = 21;
+            this.txtClienteId.TabIndex = 1;
             this.txtClienteId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtClienteId_KeyPress);
             this.txtClienteId.Leave += new System.EventHandler(this.txtClienteId_Leave_1);
             // 
@@ -150,7 +150,7 @@
             // txtClienteNombre
             // 
             this.txtClienteNombre.Location = new System.Drawing.Point(88, 100);
-            this.txtClienteNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtClienteNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtClienteNombre.Name = "txtClienteNombre";
             this.txtClienteNombre.ReadOnly = true;
             this.txtClienteNombre.Size = new System.Drawing.Size(204, 20);
@@ -170,19 +170,19 @@
             // 
             this.txtPorcentajeTasaInteres.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPorcentajeTasaInteres.Location = new System.Drawing.Point(450, 98);
-            this.txtPorcentajeTasaInteres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPorcentajeTasaInteres.Margin = new System.Windows.Forms.Padding(2);
             this.txtPorcentajeTasaInteres.Name = "txtPorcentajeTasaInteres";
             this.txtPorcentajeTasaInteres.Size = new System.Drawing.Size(76, 20);
-            this.txtPorcentajeTasaInteres.TabIndex = 25;
+            this.txtPorcentajeTasaInteres.TabIndex = 2;
             // 
             // txtPlazoMeses
             // 
             this.txtPlazoMeses.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtPlazoMeses.Location = new System.Drawing.Point(449, 136);
-            this.txtPlazoMeses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPlazoMeses.Margin = new System.Windows.Forms.Padding(2);
             this.txtPlazoMeses.Name = "txtPlazoMeses";
             this.txtPlazoMeses.Size = new System.Drawing.Size(76, 20);
-            this.txtPlazoMeses.TabIndex = 27;
+            this.txtPlazoMeses.TabIndex = 4;
             // 
             // label3
             // 
@@ -198,10 +198,10 @@
             // 
             this.txtMontoOtorgado.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtMontoOtorgado.Location = new System.Drawing.Point(594, 137);
-            this.txtMontoOtorgado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontoOtorgado.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoOtorgado.Name = "txtMontoOtorgado";
             this.txtMontoOtorgado.Size = new System.Drawing.Size(76, 20);
-            this.txtMontoOtorgado.TabIndex = 29;
+            this.txtMontoOtorgado.TabIndex = 5;
             // 
             // label4
             // 
@@ -227,17 +227,17 @@
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(596, 173);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
-            this.dateTimePicker1.TabIndex = 31;
+            this.dateTimePicker1.TabIndex = 7;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txtDiaFechaPagoMensual
             // 
             this.txtDiaFechaPagoMensual.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtDiaFechaPagoMensual.Location = new System.Drawing.Point(702, 173);
-            this.txtDiaFechaPagoMensual.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaFechaPagoMensual.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiaFechaPagoMensual.Name = "txtDiaFechaPagoMensual";
             this.txtDiaFechaPagoMensual.ReadOnly = true;
             this.txtDiaFechaPagoMensual.Size = new System.Drawing.Size(116, 20);
@@ -251,7 +251,7 @@
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.Color.White;
             this.btnNuevo.Location = new System.Drawing.Point(596, 199);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(100, 30);
             this.btnNuevo.TabIndex = 34;
@@ -263,7 +263,7 @@
             // 
             this.cbFondos.FormattingEnabled = true;
             this.cbFondos.Location = new System.Drawing.Point(60, 131);
-            this.cbFondos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbFondos.Margin = new System.Windows.Forms.Padding(2);
             this.cbFondos.Name = "cbFondos";
             this.cbFondos.Size = new System.Drawing.Size(192, 21);
             this.cbFondos.TabIndex = 35;
@@ -292,7 +292,7 @@
             // 
             this.cbRegional.FormattingEnabled = true;
             this.cbRegional.Location = new System.Drawing.Point(60, 162);
-            this.cbRegional.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbRegional.Margin = new System.Windows.Forms.Padding(2);
             this.cbRegional.Name = "cbRegional";
             this.cbRegional.Size = new System.Drawing.Size(192, 21);
             this.cbRegional.TabIndex = 37;
@@ -304,7 +304,7 @@
             this.btnPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagar.ForeColor = System.Drawing.Color.White;
             this.btnPagar.Location = new System.Drawing.Point(401, 278);
-            this.btnPagar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPagar.Margin = new System.Windows.Forms.Padding(2);
             this.btnPagar.Name = "btnPagar";
             this.btnPagar.Size = new System.Drawing.Size(100, 30);
             this.btnPagar.TabIndex = 39;
@@ -316,7 +316,7 @@
             // 
             this.txtNoTransaccion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtNoTransaccion.Location = new System.Drawing.Point(11, 278);
-            this.txtNoTransaccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNoTransaccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtNoTransaccion.Multiline = true;
             this.txtNoTransaccion.Name = "txtNoTransaccion";
             this.txtNoTransaccion.Size = new System.Drawing.Size(191, 29);
@@ -336,10 +336,10 @@
             // 
             this.txtGastiAdmin.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtGastiAdmin.Location = new System.Drawing.Point(450, 174);
-            this.txtGastiAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGastiAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.txtGastiAdmin.Name = "txtGastiAdmin";
             this.txtGastiAdmin.Size = new System.Drawing.Size(76, 20);
-            this.txtGastiAdmin.TabIndex = 43;
+            this.txtGastiAdmin.TabIndex = 6;
             // 
             // label8
             // 
@@ -365,7 +365,7 @@
             // 
             this.txtMontoTransaccionRecibido.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtMontoTransaccionRecibido.Location = new System.Drawing.Point(206, 278);
-            this.txtMontoTransaccionRecibido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontoTransaccionRecibido.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoTransaccionRecibido.Multiline = true;
             this.txtMontoTransaccionRecibido.Name = "txtMontoTransaccionRecibido";
             this.txtMontoTransaccionRecibido.Size = new System.Drawing.Size(191, 29);
@@ -378,7 +378,7 @@
             this.btnMostrarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrarReporte.ForeColor = System.Drawing.Color.White;
             this.btnMostrarReporte.Location = new System.Drawing.Point(596, 277);
-            this.btnMostrarReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMostrarReporte.Margin = new System.Windows.Forms.Padding(2);
             this.btnMostrarReporte.Name = "btnMostrarReporte";
             this.btnMostrarReporte.Size = new System.Drawing.Size(114, 30);
             this.btnMostrarReporte.TabIndex = 47;
@@ -392,7 +392,7 @@
             this.txtValorClicloPagar.BackColor = System.Drawing.Color.Chartreuse;
             this.txtValorClicloPagar.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtValorClicloPagar.Location = new System.Drawing.Point(116, 209);
-            this.txtValorClicloPagar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtValorClicloPagar.Margin = new System.Windows.Forms.Padding(2);
             this.txtValorClicloPagar.Name = "txtValorClicloPagar";
             this.txtValorClicloPagar.ReadOnly = true;
             this.txtValorClicloPagar.Size = new System.Drawing.Size(95, 20);
@@ -414,10 +414,10 @@
             // 
             this.txtInteresMoratorio.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtInteresMoratorio.Location = new System.Drawing.Point(594, 98);
-            this.txtInteresMoratorio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInteresMoratorio.Margin = new System.Windows.Forms.Padding(2);
             this.txtInteresMoratorio.Name = "txtInteresMoratorio";
             this.txtInteresMoratorio.Size = new System.Drawing.Size(76, 20);
-            this.txtInteresMoratorio.TabIndex = 51;
+            this.txtInteresMoratorio.TabIndex = 3;
             // 
             // label10
             // 

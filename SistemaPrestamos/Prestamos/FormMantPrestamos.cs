@@ -91,6 +91,7 @@ namespace SistemaPrestamos.Prestamos
                 txtNoTransaccion.Visible = false;
                 lblMontoTransaccion.Visible = false;
                 txtMontoTransaccionRecibido.Visible = false;
+                btnMostrarReporte.Visible = false;
             }
 
         }
@@ -215,6 +216,12 @@ namespace SistemaPrestamos.Prestamos
 
         private void txtClienteId_Leave_1(object sender, EventArgs e)
         {
+            int id = 0;
+            if (txtClienteId.Text.Equals("") || !int.TryParse(txtClienteId.Text, out id))
+            {
+                txtClienteNombre.Text = "";
+                return;
+            }
             DataTable cliente = new DataTable();
             cliente = scriptClientes.getDataClienteId(int.Parse(txtClienteId.Text));
             if (cliente.Rows.Count > 0)
@@ -224,14 +231,61 @@ namespace SistemaPrestamos.Prestamos
             }
             else
             {
-                MessageBox.Show(null,"El cliente no existe","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(null, "El cliente no existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool valido()
+        {
+            int numero = 0;
+
+            if(!int.TryParse(txtPorcentajeTasaInteres.Text, out numero))
+            {
+                MessageBox.Show("La tasa de interes debe ser numerico","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(txtInteresMoratorio.Text, out numero))
+            {
+                MessageBox.Show("La tasa de interes moratorio debe ser numerico", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(txtPlazoMeses.Text, out numero))
+            {
+                MessageBox.Show("El plazo en meses debe ser numerico", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(txtMontoOtorgado.Text, out numero))
+            {
+                MessageBox.Show("El monto otorgado debe ser numerico", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(txtGastiAdmin.Text, out numero))
+            {
+                MessageBox.Show("Los gastos administrativos debe ser numerico", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (!int.TryParse(txtClienteId.Text, out numero))
+            {
+                MessageBox.Show("Debe ingresar el cliente a quien le esta otorgando el prestamo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            return true;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             if (!busqueda)
             {
+                if (!valido())
+                {
+                    return;
+                }
               int creado = scriptPrestamos.insertPrestamo(int.Parse(txtClienteId.Text),int.Parse(cbFondos.SelectedValue.ToString()),int.Parse(cbRegional.SelectedValue.ToString()),
                     Math.Round(decimal.Parse(txtMontoOtorgado.Text),2), (int)PeriodosEnum.Mensual,int.Parse(txtPlazoMeses.Text),dateTimePicker1.Value,
                     Math.Round(decimal.Parse(txtPorcentajeTasaInteres.Text),2), GridDetallePresmosCliente, Math.Round(decimal.Parse(txtGastiAdmin.Text),2), Math.Round(decimal.Parse(txtInteresMoratorio.Text),2));
@@ -241,6 +295,7 @@ namespace SistemaPrestamos.Prestamos
                     txtNoTransaccion.Visible = true;
                     txtMontoTransaccionRecibido.Visible = true;
                     btnPagar.Visible = true;
+                    btnMostrarReporte.Visible = true;
                     GridDetallePresmosCliente.DataSource = scriptPrestamos.getDataCuotasPrestamosClientes(creado);
                 }
                 else
@@ -249,17 +304,19 @@ namespace SistemaPrestamos.Prestamos
                 }
                 txtValorClicloPagar.Text = scriptPrestamos.getValorCiclo(idPrestamo);
             }
-            else
-            {
-                MessageBox.Show("Editar");
-            }
         }
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
+            int numero = 0;
             if (txtNoTransaccion.Text.Equals("") || txtMontoTransaccionRecibido.Text.Equals(""))
             {
                 MessageBox.Show(null, "Ingrese el numero y/ó el monto de la transacción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!int.TryParse(txtMontoTransaccionRecibido.Text, out numero))
+            {
+                MessageBox.Show("El monto a pagar debe ser numerico", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (scriptPrestamos.esMontoValidoAPagar(idPrestamo, Math.Round(decimal.Parse(txtMontoTransaccionRecibido.Text),2)) == false)

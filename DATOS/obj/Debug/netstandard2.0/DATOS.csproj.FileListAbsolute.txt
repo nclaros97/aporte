@@ -85,3 +85,4 @@ C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practica
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\obj\Debug\netstandard2.0\DATOS.csproj.CopyComplete
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\obj\Debug\netstandard2.0\DATOS.dll
 C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\obj\Debug\netstandard2.0\DATOS.pdb
+C:\Users\nilso\OneDrive\Escritorio\PROYECTOS PROPIOS\Proyecto Prestamos Practicante\SistemaPrestamos\DATOS\obj\Debug\netstandard2.0\DATOS.csprojAssemblyReference.cache
