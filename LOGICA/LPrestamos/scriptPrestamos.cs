@@ -373,7 +373,7 @@ namespace LOGICA.LPrestamos
             SqlDataAdapter sqlDA = new SqlDataAdapter("dbo.WWPrestamos", conexion_db.conexion);
             sqlDA.SelectCommand.CommandType = CommandType.StoredProcedure;
             sqlDA.SelectCommand.Parameters.AddWithValue("@preId", preId);
-            sqlDA.SelectCommand.Parameters.AddWithValue("@accion", "SELECT_GRID_CLIENTE_CUOTAS_PRESTAMOS");
+            sqlDA.SelectCommand.Parameters.AddWithValue("@accion", "SELECT_REPORTE_CLIENTE_CUOTAS_PRESTAMOS");
             sqlDA.Fill(data);
 
             return data;

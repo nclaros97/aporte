@@ -238,7 +238,7 @@ namespace SistemaPrestamos.Prestamos
         private bool valido()
         {
             int numero = 0;
-
+            decimal numero2 = 0;
             if(!int.TryParse(txtPorcentajeTasaInteres.Text, out numero))
             {
                 MessageBox.Show("La tasa de interes debe ser numerico","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -257,13 +257,13 @@ namespace SistemaPrestamos.Prestamos
                 return false;
             }
 
-            if (!int.TryParse(txtMontoOtorgado.Text, out numero))
+            if (!decimal.TryParse(txtMontoOtorgado.Text, out numero2))
             {
                 MessageBox.Show("El monto otorgado debe ser numerico", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
-            if (!int.TryParse(txtGastiAdmin.Text, out numero))
+            if (!decimal.TryParse(txtGastiAdmin.Text, out numero2))
             {
                 MessageBox.Show("Los gastos administrativos debe ser numerico", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -308,13 +308,13 @@ namespace SistemaPrestamos.Prestamos
 
         private void btnPagar_Click(object sender, EventArgs e)
         {
-            int numero = 0;
+            decimal numero = 0;
             if (txtNoTransaccion.Text.Equals("") || txtMontoTransaccionRecibido.Text.Equals(""))
             {
                 MessageBox.Show(null, "Ingrese el numero y/ó el monto de la transacción", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (!int.TryParse(txtMontoTransaccionRecibido.Text, out numero))
+            if (!decimal.TryParse(txtMontoTransaccionRecibido.Text, out numero))
             {
                 MessageBox.Show("El monto a pagar debe ser numerico", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
