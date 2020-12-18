@@ -714,14 +714,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaPrestamos.exe" size="964096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaPrestamos.exe" size="1058304">
       <assemblyIdentity name="SistemaPrestamos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fCGTm0UAVl5NX/jghI4qS/LY6xq83flaa1oUzJReBXA=</dsig:DigestValue>
+        <dsig:DigestValue>uFnQrzlepVMzJ3NkWbvcveICqTW5VSv91m5Cj25BiPs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

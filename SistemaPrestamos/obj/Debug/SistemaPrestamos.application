@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SistemaPrestamos.exe.manifest" size="47578">
+    <dependentAssembly dependencyType="install" codebase="SistemaPrestamos.exe.manifest" size="47579">
       <assemblyIdentity name="SistemaPrestamos.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Jx91eKG5Ka4cFf4s8X2aQP3zs/qVosPuOH1lBYXuy1I=</dsig:DigestValue>
+        <dsig:DigestValue>eJsPU6K7fNyrMwNzvmjVTXyc1aL+Jj2v7zxxO8mp2Ds=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
